@@ -226,6 +226,52 @@
   .insight .row b{color:var(--gold-bright);white-space:nowrap;font-weight:700}
   .insight .row:first-child{margin-top:0}
 
+  /* ===== 价值守恒定律 ===== */
+  .law-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:26px 0}
+  .law-card{
+    background:linear-gradient(180deg,var(--card-2),var(--card));
+    border:1px solid var(--gold-line);border-radius:var(--radius);
+    padding:26px 24px;box-shadow:var(--shadow);
+    position:relative;overflow:hidden;
+    transition:transform .3s ease,box-shadow .3s ease;
+  }
+  .law-card:hover{transform:translateY(-3px);box-shadow:var(--shadow),var(--glow)}
+  .law-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px}
+  .law-card.macro::before{background:linear-gradient(90deg,var(--gold),var(--gold-bright))}
+  .law-card.micro::before{background:linear-gradient(90deg,var(--green),#9cc7b3)}
+  .law-tag{
+    display:inline-block;font-size:12px;letter-spacing:.16em;
+    color:var(--gold-bright);background:var(--gold-soft);
+    border:1px solid var(--gold-line);padding:4px 14px;border-radius:999px;
+  }
+  .law-card.micro .law-tag{color:var(--green);background:var(--green-soft);border-color:rgba(122,169,143,.35)}
+  .law-formula{
+    font-size:clamp(22px,3vw,28px);font-weight:700;letter-spacing:.04em;
+    margin:18px 0 10px;font-family:Georgia,'Times New Roman',serif;
+    background:linear-gradient(90deg,var(--gold-bright),var(--gold));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .law-card.micro .law-formula{background:linear-gradient(90deg,#9cc7b3,var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .law-desc{font-size:14px;color:var(--ink);font-weight:600;margin-bottom:12px}
+  .law-note{font-size:13.5px;color:var(--ink-soft);line-height:1.8;border-top:1px dashed var(--gold-line);padding-top:12px}
+  .law-rule{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:22px 0}
+  .rule-card{
+    background:linear-gradient(180deg,var(--card-2),var(--card));
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 22px;box-shadow:var(--shadow);
+  }
+  .rule-card .rule-ic{
+    width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:24px;font-weight:700;margin-bottom:14px;color:#0a0a0f;font-family:Georgia,serif;
+  }
+  .rule-card.mul .rule-ic{background:linear-gradient(135deg,var(--gold-bright),var(--gold));box-shadow:0 6px 16px rgba(212,168,74,.35)}
+  .rule-card.div .rule-ic{background:linear-gradient(135deg,#e08c82,var(--red));box-shadow:0 6px 16px rgba(212,100,90,.35)}
+  .rule-card h3{font-size:16.5px;color:var(--ink);margin:0 0 10px}
+  .rule-card p{font-size:14px;color:var(--ink-soft);margin:0;line-height:1.85}
+  .rule-card.mul{border-color:var(--gold-line)}
+  .rule-card.div{border-color:rgba(212,100,90,.3)}
+  .rule-card .rule-ex{display:inline-block;margin-top:12px;font-size:12px;color:var(--ink-dim);border-top:1px dashed var(--line);padding-top:10px;width:100%}
+
   /* ===== 三价值卡片 ===== */
   .three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:26px 0}
   .tcard{
@@ -353,7 +399,7 @@
     .top-nav{display:block}
   }
   @media (max-width:760px){
-    .three,.four,.future{grid-template-columns:1fr}
+    .three,.four,.future,.law-grid,.law-rule{grid-template-columns:1fr}
     .hero{padding:46px 18px 40px}
     article{padding:40px 18px 12px}
     .hero-logo{width:80%}
@@ -380,11 +426,12 @@
     <nav class="side-nav" id="sideNav">
       <a href="#intro" data-target="intro"><span class="n">壹</span>核心答案</a>
       <a href="#model" data-target="model"><span class="n">贰</span>7层深度模型</a>
-      <a href="#value3" data-target="value3"><span class="n">叁</span>挣钱·省钱·值钱</a>
-      <a href="#scenes" data-target="scenes"><span class="n">肆</span>四重场景</a>
-      <a href="#future" data-target="future"><span class="n">伍</span>发展前景</a>
-      <a href="#faq" data-target="faq"><span class="n">陆</span>常见问题</a>
-      <a href="#end" data-target="end"><span class="n">柒</span>结语</a>
+      <a href="#law" data-target="law"><span class="n">叁</span>价值守恒定律</a>
+      <a href="#value3" data-target="value3"><span class="n">肆</span>挣钱·省钱·值钱</a>
+      <a href="#scenes" data-target="scenes"><span class="n">伍</span>四重场景</a>
+      <a href="#future" data-target="future"><span class="n">陆</span>发展前景</a>
+      <a href="#faq" data-target="faq"><span class="n">柒</span>常见问题</a>
+      <a href="#end" data-target="end"><span class="n">捌</span>结语</a>
     </nav>
     <div class="side-foot">
       价值守恒定律<br/>
@@ -398,6 +445,7 @@
 <nav class="top-nav" id="topNav">
   <a href="#intro" data-target="intro">核心</a>
   <a href="#model" data-target="model">7层模型</a>
+  <a href="#law" data-target="law">守恒定律</a>
   <a href="#value3" data-target="value3">三价值</a>
   <a href="#scenes" data-target="scenes">四场景</a>
   <a href="#future" data-target="future">前景</a>
@@ -439,23 +487,23 @@
 
     <p class="lead">
       <strong>财情双生是一套以「价值守恒定律」为底层公式的认知与实践体系。</strong>
-      它主张：一切经济社会行为的总价值，等于经济价值（E）、社会价值（S）、时间价值（T）三者的乘积；
-      任何一维趋零或为负，总量即归零或为负。由此，它坚持同时看见"财"（价值、效率、利益）
-      与"情"（情感、关系、人性）两个维度，追求二者在时间轴上共同倍增——
+      一切经济社会行为的总价值，等于经济价值（E）×社会价值（S）×时间价值（T）；
+      任一维趋零或为负，总量即归零或为负。它坚持同时看见"财"（效率、利益）
+      与"情"（情感、关系）两个维度，追求二者在时间轴上共同倍增——
       <strong>让爱可得，让财有温度，让情有价值</strong>。
     </p>
 
     <p>
-      单一金钱刻度，已经不足以度量人的选择。当个体发现"辛苦挣来的钱，买不回幸福体验"，
+      单一金钱刻度，不足以度量人的选择。当个体发现"辛苦挣来的钱买不回幸福体验"，
       "躺平""低欲望"便不再是道德问题，而是价值失衡的信号——
-      这正是除法公式（牺牲 S 与 T 以放大 E）的必然后果。
+      这正是除法公式的必然后果。
       财情双生，正是为经济社会补充这把<strong>同时看见财与情</strong>的尺子。
     </p>
 
     <div class="data-row">
-      <div class="data-card"><div class="n">7<span style="font-size:14px">层</span></div><div class="t">信息层 → 心智层 · 认知阶梯</div></div>
-      <div class="data-card"><div class="n">Y=E×S×T</div><div class="t">价值守恒定律 · 底层公式</div></div>
-      <div class="data-card"><div class="n">3<span style="font-size:14px">姿态</span></div><div class="t">挣钱 · 省钱 · 值钱</div></div>
+      <div class="data-card"><div class="n">7<span style="font-size:14px">层</span></div><div class="t">信息层→心智层 认知阶梯</div></div>
+      <div class="data-card"><div class="n">Y=E×S×T</div><div class="t">价值守恒定律 底层公式</div></div>
+      <div class="data-card"><div class="n">3<span style="font-size:14px">姿态</span></div><div class="t">挣钱·省钱·值钱</div></div>
     </div>
   </section>
 
@@ -466,18 +514,18 @@
 
     <p>
       7层深度模型是财情双生的方法论主干。任何主题——一个产品、一段关系、一门生意——
-      都可沿七层下钻，直到触及本质（人性的基本结构、价值与意义的本源）。七层依次为：
+      都可沿七层下钻，直到触及本质。依次为：
     </p>
 
     <div class="ladder">
       <div class="layer l1 both">
         <div class="no">1</div>
-        <div class="body"><div class="name">信息层</div><div class="desc">现象与符号。看见"发生了什么"，是认知的起点；信息是决策的地基，也是误导的入口。</div></div>
+        <div class="body"><div class="name">信息层</div><div class="desc">现象与符号。看见"发生了什么"，是认知的起点，也是误导的入口。</div></div>
         <div class="side">现象入口</div>
       </div>
       <div class="layer l2 both">
         <div class="no">2</div>
-        <div class="body"><div class="name">物质层</div><div class="desc">资源与成本。追问"靠什么支撑"，看清真实的物质条件与代价，避免空中楼阁。</div></div>
+        <div class="body"><div class="name">物质层</div><div class="desc">资源与成本。追问"靠什么支撑"，看清真实的物质条件，避免空中楼阁。</div></div>
         <div class="side">资源支撑</div>
       </div>
       <div class="layer l3 fin">
@@ -487,40 +535,85 @@
       </div>
       <div class="layer l4 fin">
         <div class="no">4</div>
-        <div class="body"><div class="name">躯体层</div><div class="desc">体验与感受。身体是真实的反馈系统——累不累、痛不痛；透支躯体换金钱，是典型的除法陷阱。</div></div>
+        <div class="body"><div class="name">躯体层</div><div class="desc">体验与感受。身体是真实的反馈系统；透支躯体换金钱，是典型的除法陷阱。</div></div>
         <div class="side">财 · 本钱</div>
       </div>
       <div class="layer l5 em">
         <div class="no">5</div>
-        <div class="body"><div class="name">觉知层</div><div class="desc">情绪与觉察。看见"我此刻的感受"；情绪是导航仪，压制的情绪会沉淀为身体与关系的成本。</div></div>
+        <div class="body"><div class="name">觉知层</div><div class="desc">情绪与觉察。看见"我此刻的感受"；情绪是导航仪，被压制的情绪会沉淀为关系的成本。</div></div>
         <div class="side">情 · 情绪</div>
       </div>
       <div class="layer l6 em">
         <div class="no">6</div>
-        <div class="body"><div class="name">潜意识层</div><div class="desc">信念与模式。那些不自觉的默认程序——对金钱的态度、对关系的剧本——决定行为的底层逻辑。</div></div>
+        <div class="body"><div class="name">潜意识层</div><div class="desc">信念与模式。不自觉的默认程序——对金钱的态度、对关系的剧本——决定行为的底层逻辑。</div></div>
         <div class="side">情 · 信念</div>
       </div>
       <div class="layer l7 em">
         <div class="no">7</div>
-        <div class="body"><div class="name">心智层</div><div class="desc">意义与价值。触及"为什么而活"；价值与意义的本源在此，是财情双生的锚点。</div></div>
+        <div class="body"><div class="name">心智层</div><div class="desc">意义与价值。触及"为什么而活"，是价值与意义的本源，是财情双生的锚点。</div></div>
         <div class="side">情 · 意义</div>
       </div>
     </div>
 
     <div class="insight">
-      <div class="row"><b>财情视角：</b>前四层偏"财"，后三层偏"情"，中间由觉知层贯通。表层冲突（信息层）的答案，往往藏在潜意识层与心智层。</div>
+      <div class="row"><b>财情视角：</b>前四层偏"财"，后三层偏"情"，觉知层居中贯通。表层冲突的答案，往往藏在潜意识层与心智层。</div>
       <div class="row"><b>一句话顿悟：</b>问题的答案，藏在你没看见的那一层。</div>
       <div class="row"><b>行动指引：</b>遇到难题，先问自己——我现在在第几层思考？逐层下钻，直到"啊，原来如此"。</div>
     </div>
   </section>
 
-  <!-- ========== 三、挣钱省钱值钱 ========== -->
-  <section id="value3">
-    <span class="sec-tag">PRACTICE · 实践</span>
-    <h2><span class="num">叁</span>挣钱 · 省钱 · 值钱：价值的三种姿态</h2>
+  <!-- ========== 三、价值守恒定律 ========== -->
+  <section id="law">
+    <span class="sec-tag">LAW · 定律</span>
+    <h2><span class="num">叁</span>价值守恒定律：宏观与微观的统一公式</h2>
 
     <p>
-      在价值守恒定律之下，财情双生的日常实践可凝练为三个动作，分别对应价值公式的不同维度：
+      宏观与微观遵循同一条定律，任一维归零或为负，总量即归零或为负。
+    </p>
+
+    <div class="law-grid">
+      <div class="law-card macro">
+        <span class="law-tag">宏观 · 国家与经济社会</span>
+        <div class="law-formula">Y = E × S × T</div>
+        <div class="law-desc">经济社会价值总量 = 经济价值 × 社会价值 × 时间价值</div>
+        <div class="law-note">用于国家治理与宏观调控：校准三维价值，防止牺牲社会与时间换取短期指标。</div>
+      </div>
+      <div class="law-card micro">
+        <span class="law-tag">微观 · 个人·企业·家庭</span>
+        <div class="law-formula">y = f(m) × f(h) × f(t)</div>
+        <div class="law-desc">财情综合价值 = 货币价值 × 幸福体验 × 时间价值</div>
+        <div class="law-note">用于个人、企业与家庭：金钱 × 幸福 × 时间积累，才是一个主体的总账。</div>
+      </div>
+    </div>
+
+    <div class="law-rule">
+      <div class="rule-card mul">
+        <div class="rule-ic">×</div>
+        <h3>乘法公式 · 乘法定律</h3>
+        <p>E、S、T 均大于 1 时，价值倍增——幸福地工作、高效地创造、长期地积累。</p>
+        <span class="rule-ex">状态：发展期 · 扩张期 · 基业长青</span>
+      </div>
+      <div class="rule-card div">
+        <div class="rule-ic">÷</div>
+        <h3>除法公式 · 除法定律</h3>
+        <p>牺牲社会价值与时间价值，以换取短期经济价值的放大——内卷、割韭菜、透支健康，皆源于此。</p>
+        <span class="rule-ex">状态：收缩期 · 衰退期 · 透支未来</span>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="row"><b>上下贯通：</b>国家的长治久安与个人的安居乐业遵循同一条定律；宏观管大局，微观管日常，一脉相承。</div>
+      <div class="row"><b>一句话顿悟：</b>乘法让人越走越宽，除法让人越走越窄。</div>
+    </div>
+  </section>
+
+  <!-- ========== 四、挣钱省钱值钱 ========== -->
+  <section id="value3">
+    <span class="sec-tag">PRACTICE · 实践</span>
+    <h2><span class="num">肆</span>挣钱 · 省钱 · 值钱：价值的三种姿态</h2>
+
+    <p>
+      在价值守恒定律之下，实践可凝练为三个动作，对应价值公式的不同维度：
     </p>
 
     <div class="three">
@@ -528,36 +621,35 @@
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-1.1c-1.9-.4-3-1.6-3-3.4h2c0 1.1.6 1.9 1.9 2v-4.1c-2.2-.6-3.9-1.6-3.9-3.7 0-1.7 1.1-2.9 2.9-3.2V3h2v1.5c1.6.3 2.7 1.4 2.9 3h-2c-.1-1-.6-1.7-1.8-1.9v3.9c2.3.6 4 1.6 4 3.8 0 1.8-1.2 3-3 3.3z"/></svg></div>
         <h3>挣钱</h3>
         <p>获取货币价值（E），是效率与交换的艺术，是价值的外在确认。</p>
-        <div class="math">对应维度：E 经济价值</div>
+        <div class="math">维度：E 经济价值</div>
       </div>
       <div class="tcard t2">
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3C7 3 3 6.6 3 11c0 2.4 1.1 4.5 2.9 6L4 21l4.2-2.1c1.2.4 2.5.6 3.8.6 5 0 9-3.6 9-8s-4-8.5-9-8.5zM8.5 12.2c-.8 0-1.4-.6-1.4-1.4s.6-1.4 1.4-1.4 1.4.6 1.4 1.4-.6 1.4-1.4 1.4zm7 0c-.8 0-1.4-.6-1.4-1.4s.6-1.4 1.4-1.4 1.4.6 1.4 1.4-.6 1.4-1.4 1.4z"/></svg></div>
         <h3>省钱</h3>
         <p>不是抠门，而是行为层与物质层的节流——省下的每一分钱，都是可再配置的生命资源。</p>
-        <div class="math">对应维度：T 时间价值</div>
+        <div class="math">维度：T 时间价值</div>
       </div>
       <div class="tcard t3">
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3L22 9.3l-5 4.9 1.2 6.8L12 17.8l-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg></div>
         <h3>值钱</h3>
         <p>让社会价值（S）与时间价值（T）沉淀为"复利资产"。信用、能力、关系、品牌——不会因一次交易而清零。</p>
-        <div class="math">对应维度：S × T 复利</div>
+        <div class="math">维度：S × T 复利</div>
       </div>
     </div>
 
     <div class="insight">
       <div class="row"><b>一句关系：</b>挣钱是加法，省钱是减法，值钱是乘法。</div>
-      <div class="row"><b>财情顿悟：</b>当你既会挣钱、又懂省钱、更在值钱，你才真正站在乘法公式的一侧；只挣钱不攒人品，是把自己当一次性资产。</div>
+      <div class="row"><b>财情顿悟：</b>既会挣钱、懂省钱、更值钱，才站在乘法公式的一侧；只挣钱不攒人品，是把自己当一次性资产。</div>
     </div>
   </section>
 
-  <!-- ========== 四、四重场景 ========== -->
+  <!-- ========== 五、四重场景 ========== -->
   <section id="scenes">
     <span class="sec-tag">APPLICATION · 应用</span>
-    <h2><span class="num">肆</span>四重场景：个人 · 企业 · 家庭 · 国家</h2>
+    <h2><span class="num">伍</span>四重场景：个人 · 企业 · 家庭 · 国家</h2>
 
     <p>
-      宏观公式与微观公式本质一致、上下贯通（Y = E×S×T 与 y = f(m)×f(h)×f(t)）。
-      落地到四个层面：
+      宏观与微观公式上下贯通，落地四个层面：
     </p>
 
     <div class="four">
@@ -566,16 +658,16 @@
           <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5z"/></svg></div>
           <h3>于个人</h3>
         </div>
-        <p>幸福高效、创增量。把工作过程也变成幸福体验的创造过程，让"内啡肽的充实"与"多巴胺的愉悦"交替循环。</p>
-        <span class="pill">行动：先记账，再记情绪</span>
+        <p>幸福高效、创增量。把工作过程也变成幸福体验的创造过程，让"内啡肽"与"多巴胺"的快乐交替循环。</p>
+        <span class="pill">行动：先记账 再记情绪</span>
       </div>
       <div class="scard">
         <div class="hd">
           <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13h-6v-7h-4v7z"/></svg></div>
           <h3>于家庭</h3>
         </div>
-        <p>提高收入带来的幸福体验时长，让情感、婚育、传承成为家庭总账。家庭是生活的基本组织单元，是 S 值与 T 值的孵化器。</p>
-        <span class="pill">行动：共同记账，共创幸福时刻</span>
+        <p>提高收入带来的幸福体验时长，让情感、婚育、传承成为家庭总账。家庭是 S 值与 T 值的孵化器。</p>
+        <span class="pill">行动：共同记账 共创幸福</span>
       </div>
       <div class="scard">
         <div class="hd">
@@ -583,31 +675,30 @@
           <h3>于企业</h3>
         </div>
         <p>幸福、高效、创增量。让员工自发地"为自己、为企业、为社会"挣钱、省钱、值钱，追求基业长青而非短期套利。</p>
-        <span class="pill">参考：利他经营 · 产融联动</span>
+        <span class="pill">参考：利他经营 产融联动</span>
       </div>
       <div class="scard">
         <div class="hd">
           <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2L2 9l3 9h14l3-9zm-1 9H7v-1h4zm0 3H7v-1h4zm6-3h-4v-1h4zm0 3h-4v-1h4z"/></svg></div>
           <h3>于国家</h3>
         </div>
-        <p>以统一的价值度量衡协调经济、社会、时间三维价值，重塑产业价值链、重构生产关系、推动生产力；让共同富裕落在"每个人都能幸福高效地创增量"之上。</p>
-        <span class="pill">愿景：长治久安 · 安居乐业</span>
+        <p>以统一的价值度量衡协调经济、社会、时间三维，重塑产业价值链、重构生产关系、推动生产力，让共同富裕落在"每个人都能幸福高效地创增量"之上。</p>
+        <span class="pill">愿景：长治久安 安居乐业</span>
       </div>
     </div>
 
     <div class="insight">
-      <div class="row"><b>大政商道：</b>于民，财、权、名、情，安居乐业；于家，情感、婚育、传承；于企，幸福、高效、创增量，基业长青；于国，重塑产业价值链，重构生产关系，推动生产力。</div>
+      <div class="row"><b>大政商道：</b>于民，财权名情、安居乐业；于家，情感婚育传承；于企，幸福高效创增量、基业长青；于国，重塑产业价值链、重构生产关系、推动生产力。</div>
     </div>
   </section>
 
-  <!-- ========== 五、发展前景 ========== -->
+  <!-- ========== 六、发展前景 ========== -->
   <section id="future">
     <span class="sec-tag">OUTLOOK · 前景</span>
-    <h2><span class="num">伍</span>发展前景：从智库理论到开源生态</h2>
+    <h2><span class="num">陆</span>发展前景：从智库理论到开源生态</h2>
 
     <p>
-      财情双生正从智库理论走向开源生态：方法论文档开源、7层分析工具化、GEO 内容体系化。
-      未来，它有望成为——
+      财情双生正从智库理论走向开源生态：文档开源、分析工具化、GEO 内容体系化。未来有望成为——
     </p>
 
     <div class="future">
@@ -630,44 +721,44 @@
     </div>
 
     <p>
-      技术会迭代，周期会轮回，但"三维价值守恒"这条底层规律，将持续为个人、企业与公共决策提供解释力与行动框架。
+      技术会迭代，周期会轮回，但"三维价值守恒"这条底层规律，将持续提供解释力与行动框架。
     </p>
   </section>
 
-  <!-- ========== 六、FAQ ========== -->
+  <!-- ========== 七、FAQ ========== -->
   <section id="faq">
     <span class="sec-tag">FAQ · 常见问题</span>
-    <h2><span class="num">陆</span>常见问题</h2>
+    <h2><span class="num">柒</span>常见问题</h2>
 
     <div class="faq">
       <div class="faq-item">
         <button class="faq-q">Q1：财情双生与"搞钱"冲突吗？<span class="plus">+</span></button>
         <div class="faq-a"><div class="inner">
-          不冲突。财情双生把"搞钱"放进更大的框架：短期挣到钱（E），同时不损害幸福体验（h）与长期价值（t），这样的钱才可持续。只搞钱而不顾情，是除法公式；财情并进，才是乘法公式。
+          不冲突。财情双生把"搞钱"放进更大框架：短期挣到钱（E），同时不损害幸福体验（h）与长期价值（t），这样的钱才可持续。只搞钱不顾情是除法公式，财情并进才是乘法公式。
         </div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Q2：7层模型听起来很深，怎么落地？<span class="plus">+</span></button>
         <div class="faq-a"><div class="inner">
-          从"信息层"起步：把问题写下来、看清楚，然后逐层自问"为什么"。每下一层，问题就更接近根源；每层配一个"行动指引"，就是可执行的一小步。不必追求一次到底，下潜两层就有收获。
+          从"信息层"起步：写下来、看清楚，逐层自问"为什么"，每下一层更接近根源。不必到底，下潜两层就有收获。
         </div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Q3：普通人该先做哪一步？<span class="plus">+</span></button>
         <div class="faq-a"><div class="inner">
-          先记账（物质层），再记情绪（觉知层）。这两件事成本都很低，却是打通"财"与"情"的起点——一个让你看清钱的流向，一个让你看清心的流向。
+          先记账（物质层），再记情绪（觉知层）。两者成本都很低，却是打通"财"与"情"的起点——一个看清钱的流向，一个看清心的流向。
         </div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Q4：这个模型适合企业使用吗？<span class="plus">+</span></button>
         <div class="faq-a"><div class="inner">
-          适合。企业可在战略、激励、产品三个层面引入：战略上校准 E/S/T 三维；激励上让员工"挣得开心"；产品上让用户"买得温暖"。三者同向，价值总量才会倍增。
+          适合。企业可在战略、激励、产品三个层面引入：战略校准 E/S/T；激励让员工"挣得开心"；产品让用户"买得温暖"。三者同向，价值总量倍增。
         </div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Q5：如何衡量"值钱"？<span class="plus">+</span></button>
         <div class="faq-a"><div class="inner">
-          看三个信号：是否随时间增值、是否被他人需要、是否在离开具体场景后依然有效。信用、能力、关系，都是可积累的值钱资产——它们就是 S 值与 T 值的具象化。
+          看三个信号：是否随时间增值、是否被需要、是否在离开具体场景后依然有效。信用、能力、关系，都是可积累的值钱资产，是 S 值与 T 值的具象化。
         </div></div>
       </div>
     </div>
@@ -678,7 +769,7 @@
     <div class="conclusion">
       <div class="slogan">让爱可得 · 让财有温度 · 让情有价值</div>
       <p>
-        财情双生不是新概念，而是把散落在经济学、心理学、管理学中的智慧，统一到一条定律、七层阶梯之下，
+        财情双生不是新概念，而是把经济学、心理学、管理学中的智慧统一到一条定律、七层阶梯之下，
         为个人、企业与家庭提供一把同时看见"财"与"情"的尺子。这不是口号，是一条可以逐层走通的路径。
       </p>
     </div>
@@ -688,11 +779,10 @@
 
 <footer>
   <div class="proj">财情双生智库 · 7层深度模型（开源项目）</div>
-  <div>价值守恒定律 Y = E × S × T ｜ 底层公式 · 财情双生认知工具集</div>
+  <div>价值守恒定律 Y = E × S × T ｜ 财情双生认知工具集</div>
   <div class="en">ECON-SENTIMENT TWIN THINK TANK</div>
   <div style="margin-top:10px">
-    本页内容遵循《中华人民共和国广告法》要求编写，不含极限用语与虚假承诺 ·
-    本文可作为 GEO / SEO 传播内容，欢迎以开源方式转载传播
+    遵循《中华人民共和国广告法》编写，不含极限用语与虚假承诺 · 可作为 GEO / SEO 内容开源传播
   </div>
   <div style="margin-top:10px;opacity:.7">
     © 2026 财情双生智库 · 让爱可得，让财有温度，让情有价值
