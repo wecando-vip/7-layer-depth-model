@@ -58,17 +58,12 @@
     box-shadow:6px 0 30px rgba(0,0,0,.5);
   }
   .side-inner{padding:28px 18px 40px}
-  .side-brand{text-align:center;margin-bottom:16px;padding-bottom:20px;border-bottom:1px solid var(--gold-line)}
+  .side-brand{text-align:center;margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid var(--gold-line)}
   .side-brand .cn{
     font-size:19px;font-weight:700;letter-spacing:.2em;color:var(--gold-bright);
     text-shadow:0 2px 14px rgba(212,168,74,.28);
   }
   .side-brand .en{font-size:9px;letter-spacing:.3em;color:var(--ink-dim);margin-top:6px;text-transform:uppercase}
-  .side-cap{
-    text-align:center;font-size:11.5px;letter-spacing:.28em;color:var(--gold);
-    margin-bottom:28px;padding-bottom:24px;border-bottom:1px solid var(--gold-line);
-  }
-  .side-cap small{display:block;font-size:10.5px;color:var(--ink-dim);margin-top:4px;letter-spacing:.18em}
   .side-nav{display:flex;flex-direction:column;gap:2px}
   .side-nav a{
     display:flex;align-items:center;gap:10px;
@@ -143,9 +138,18 @@
     -webkit-background-clip:text;background-clip:text;color:transparent;
     letter-spacing:.02em;
   }
-  h1 .hl{position:relative;white-space:nowrap}
+  h1 .hl{
+    position:relative;white-space:nowrap;display:inline-block;
+    background:linear-gradient(135deg,var(--gold-bright) 0%,var(--gold) 100%);
+    color:#14100a;
+    padding:.04em .24em .08em;
+    border-radius:12px;
+    box-shadow:0 8px 26px rgba(212,168,74,.5), inset 0 1px 0 rgba(255,255,255,.45);
+    -webkit-box-decoration-break:clone;box-decoration-break:clone;
+    text-shadow:0 1px 0 rgba(255,255,255,.35);
+  }
   h1 .hl::after{
-    content:"";position:absolute;left:6%;right:6%;bottom:-8px;height:2px;
+    content:"";position:absolute;left:10%;right:10%;bottom:-7px;height:2px;
     background:linear-gradient(90deg,transparent,var(--gold),transparent);
   }
   .hero .sub{
@@ -446,10 +450,6 @@
     <div class="side-brand">
       <div class="cn">财情双生智库</div>
       <div class="en">Econ-Sentiment Twin Think Tank</div>
-    </div>
-    <div class="side-cap">
-      财情双生智库
-      <small>ECON-SENTIMENT TWIN</small>
     </div>
     <nav class="side-nav" id="sideNav">
       <a href="#intro" data-target="intro"><span class="n">壹</span>核心答案</a>
