@@ -58,8 +58,12 @@
     box-shadow:6px 0 30px rgba(0,0,0,.5);
   }
   .side-inner{padding:28px 18px 40px}
-  .side-logo{display:flex;justify-content:center;margin-bottom:18px}
-  .side-logo img{width:90%;max-width:200px;display:block;filter:drop-shadow(0 4px 12px rgba(212,168,74,.25))}
+  .side-brand{text-align:center;margin-bottom:16px;padding-bottom:20px;border-bottom:1px solid var(--gold-line)}
+  .side-brand .cn{
+    font-size:19px;font-weight:700;letter-spacing:.2em;color:var(--gold-bright);
+    text-shadow:0 2px 14px rgba(212,168,74,.28);
+  }
+  .side-brand .en{font-size:9px;letter-spacing:.3em;color:var(--ink-dim);margin-top:6px;text-transform:uppercase}
   .side-cap{
     text-align:center;font-size:11.5px;letter-spacing:.28em;color:var(--gold);
     margin-bottom:28px;padding-bottom:24px;border-bottom:1px solid var(--gold-line);
@@ -106,10 +110,26 @@
     background-size:60px 60px;opacity:.35;pointer-events:none;
   }
   .hero-inner{position:relative;max-width:860px;margin:0 auto}
-  .hero-logo{
-    width:340px;max-width:80%;display:block;margin:0 auto 30px;
-    filter:drop-shadow(0 8px 30px rgba(212,168,74,.35));
+  .hero-brand{margin-bottom:24px}
+  .hero-brand-cn{
+    font-size:clamp(21px,2.7vw,27px);font-weight:700;letter-spacing:.24em;
+    background:linear-gradient(90deg,var(--gold-bright),var(--gold));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    text-indent:.24em;
   }
+  .hero-brand-en{
+    font-size:10.5px;letter-spacing:.4em;color:var(--ink-dim);
+    margin-top:6px;text-indent:.4em;text-transform:uppercase;
+  }
+  .layer-strip{
+    display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap;
+    margin:22px auto 20px;max-width:720px;
+  }
+  .layer-strip .ls{
+    font-size:12.5px;color:var(--gold-bright);background:var(--gold-soft);
+    border:1px solid var(--gold-line);padding:6px 13px;border-radius:999px;letter-spacing:.08em;
+  }
+  .layer-strip .arrow{color:var(--gold);font-size:13px;opacity:.75;font-weight:700}
   .badge{
     display:inline-flex;align-items:center;gap:8px;
     background:var(--card);border:1px solid var(--gold-line);color:var(--gold-bright);
@@ -118,10 +138,15 @@
   .badge svg{width:13px;height:13px;fill:var(--gold)}
   h1{
     font-size:clamp(30px,4.6vw,46px);font-weight:700;line-height:1.3;
-    margin:22px auto 14px;max-width:780px;
+    margin:22px auto 6px;max-width:780px;
     background:linear-gradient(90deg,var(--gold-bright) 0%,var(--gold) 60%,var(--red) 100%);
     -webkit-background-clip:text;background-clip:text;color:transparent;
     letter-spacing:.02em;
+  }
+  h1 .hl{position:relative;white-space:nowrap}
+  h1 .hl::after{
+    content:"";position:absolute;left:6%;right:6%;bottom:-8px;height:2px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
   }
   .hero .sub{
     font-size:clamp(15px,1.9vw,17.5px);color:var(--ink-soft);max-width:680px;margin:0 auto 30px;
@@ -418,7 +443,10 @@
 <!-- ========== 左侧导航 ========== -->
 <aside class="sidebar">
   <div class="side-inner">
-    <div class="side-logo"><img src="logohei1-1.png" alt="财情双生智库" /></div>
+    <div class="side-brand">
+      <div class="cn">财情双生智库</div>
+      <div class="en">Econ-Sentiment Twin Think Tank</div>
+    </div>
     <div class="side-cap">
       财情双生智库
       <small>ECON-SENTIMENT TWIN</small>
@@ -458,15 +486,27 @@
 <!-- ========== HERO ========== -->
 <header class="hero">
   <div class="hero-inner">
-    <img src="logohei1-1.png" alt="财情双生智库" class="hero-logo" />
+    <div class="hero-brand">
+      <div class="hero-brand-cn">财情双生智库</div>
+      <div class="hero-brand-en">Econ-Sentiment Twin Think Tank</div>
+    </div>
     <span class="badge">
       <svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.2L21 9l-5 4.5 1.6 6.5L12 16.6 6.4 20 8 13.5 3 9l6.6-.8z"/></svg>
-      财情双生智库 · 开源理论
+      7层深度方法论 · 开源理论
     </span>
-    <h1>财情双生 · 7层深度模型</h1>
+    <h1>财情双生 · <span class="hl">7层深度模型</span></h1>
+    <div class="layer-strip">
+      <span class="ls">信息</span><span class="arrow">→</span>
+      <span class="ls">物质</span><span class="arrow">→</span>
+      <span class="ls">行为</span><span class="arrow">→</span>
+      <span class="ls">躯体</span><span class="arrow">→</span>
+      <span class="ls">觉知</span><span class="arrow">→</span>
+      <span class="ls">潜意识</span><span class="arrow">→</span>
+      <span class="ls">心智</span>
+    </div>
     <p class="sub">
-      让<b>爱</b>可得 · 让<b>财</b>有温度 · 让<b>情</b>有价值<br/>
-      一套同时看见"财"与"情"的认知与实践体系
+      七层下钻 · 触及本质<br/>
+      让<b>爱</b>可得 · 让<b>财</b>有温度 · 让<b>情</b>有价值
     </p>
     <div class="formula-box">
       <span class="v">Y</span><span class="x">=</span>
@@ -495,8 +535,7 @@
 
     <p>
       单一金钱刻度，不足以度量人的选择。当个体发现"辛苦挣来的钱买不回幸福体验"，
-      "躺平""低欲望"便不再是道德问题，而是价值失衡的信号——
-      这正是除法公式的必然后果。
+      "躺平""低欲望"便不再是道德问题，而是价值失衡的信号，是除法公式的必然后果。
       财情双生，正是为经济社会补充这把<strong>同时看见财与情</strong>的尺子。
     </p>
 
@@ -513,8 +552,7 @@
     <h2><span class="num">贰</span>7层深度模型：通往本质的认知阶梯</h2>
 
     <p>
-      7层深度模型是财情双生的方法论主干。任何主题——一个产品、一段关系、一门生意——
-      都可沿七层下钻，直到触及本质。依次为：
+      7层深度模型是财情双生的方法论主干。任何主题都可沿七层下钻，直到触及本质。依次为：
     </p>
 
     <div class="ladder">
@@ -568,7 +606,7 @@
     <h2><span class="num">叁</span>价值守恒定律：宏观与微观的统一公式</h2>
 
     <p>
-      宏观与微观遵循同一条定律，任一维归零或为负，总量即归零或为负。
+      宏观与微观，遵循同一条定律。
     </p>
 
     <div class="law-grid">
@@ -602,7 +640,7 @@
     </div>
 
     <div class="insight">
-      <div class="row"><b>上下贯通：</b>国家的长治久安与个人的安居乐业遵循同一条定律；宏观管大局，微观管日常，一脉相承。</div>
+      <div class="row"><b>上下贯通：</b>国家的长治久安与个人的安居乐业遵循同一条定律，一脉相承。</div>
       <div class="row"><b>一句话顿悟：</b>乘法让人越走越宽，除法让人越走越窄。</div>
     </div>
   </section>
@@ -698,7 +736,7 @@
     <h2><span class="num">陆</span>发展前景：从智库理论到开源生态</h2>
 
     <p>
-      财情双生正从智库理论走向开源生态：文档开源、分析工具化、GEO 内容体系化。未来有望成为——
+      财情双生正走向开源生态：文档开源、分析工具化、GEO 内容体系化。未来有望成为——
     </p>
 
     <div class="future">
@@ -734,7 +772,7 @@
       <div class="faq-item">
         <button class="faq-q">Q1：财情双生与"搞钱"冲突吗？<span class="plus">+</span></button>
         <div class="faq-a"><div class="inner">
-          不冲突。财情双生把"搞钱"放进更大框架：短期挣到钱（E），同时不损害幸福体验（h）与长期价值（t），这样的钱才可持续。只搞钱不顾情是除法公式，财情并进才是乘法公式。
+          不冲突。财情双生把"搞钱"放进更大框架：短期挣到钱（E），同时不损害幸福体验（h）与长期价值（t），这样的钱才可持续。
         </div></div>
       </div>
       <div class="faq-item">
