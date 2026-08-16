@@ -37,7 +37,9 @@
 | `psychology-schools-en.html` | 深度论证页（英文，信达雅翻译）：The Integrative Choice of Psychology Schools，与中文论证页一一对应 |
 | `7层深度.png` | 7 级深度模型图谱（编码方/解码方·弱链接/强链接·10 大应用领域） |
 | `README.md` | 项目说明（本文件） |
-| `LICENSE` | 开源许可证（MIT） |
+| `LICENSE` | 网页代码与实现许可（MIT） |
+| `LICENSE-CC-BY-NC.md` | 内容许可（CC BY-NC 4.0 · 署名-非商业性使用）：理论、文章、图谱与翻译 |
+| `NOTICE.md` | 版权归属与署名规范（含商业授权说明） |
 
 ## 文章涵盖
 
@@ -60,9 +62,26 @@
 - 本页面内容遵循《中华人民共和国广告法》编写，不含极限用语与虚假承诺。
 - 页面品牌标识使用文字「财情双生智库 · Econ-Sentiment Twin Think Tank」，不含外部图片素材。
 
-## License
+## 许可与授权
 
-[MIT](LICENSE) © 2026 财情双生智库
+### 内容许可（理论 · 文章 · 图谱 · 翻译）
+
+本文档内容遵循 **CC BY-NC 4.0**（署名-非商业性使用 4.0 国际）许可协议。任何人可以自由**引用、翻译、改编、传播**本内容，但**不得用于商业目的**，且必须**标注署名**并保留许可声明。详细条款见 [`LICENSE-CC-BY-NC.md`](LICENSE-CC-BY-NC.md)。
+
+### 版权归属
+
+理论体系与文档内容的版权归**财情双生智库（Econ-Sentiment Twin Think Tank）**及相关作者所有。署名规范、演绎作品标注与商业授权指引见 [`NOTICE.md`](NOTICE.md)。
+
+### 代码许可
+
+网页代码与实现（HTML/CSS/JS）采用 [MIT](LICENSE) 许可，© 2026 财情双生智库。
+
+### 推荐署名格式
+
+> 来源：财情双生智库（Econ-Sentiment Twin Think Tank）·《7层深度模型》系列
+> 许可：CC BY-NC 4.0 · https://creativecommons.org/licenses/by-nc/4.0/
+
+商业用途（企业培训、商业出版、付费内容等）须另行取得书面授权。
 
 ---
 
