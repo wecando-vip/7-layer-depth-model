@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Econ-Sentiment Twin · 7-Layer Depth Model — Make Love Attainable · Give Wealth Warmth · Grant Emotion Value</title>
+<meta name="description" content="Econ-Sentiment Twin: a cognitive and practical system built on the Law of Value Conservation (Y = E × S × T), using a 7-Layer Depth Model to see both wealth and emotion across individuals, enterprises, families and nations — and to explain earning, saving and being valuable." />
+<meta name="keywords" content="Econ-Sentiment Twin,7-Layer Depth Model,Law of Value Conservation,earning saving valuable" />
+<meta property="og:title" content="Econ-Sentiment Twin · 7-Layer Depth Model" />
+<meta property="og:description" content="Make love attainable · Give wealth warmth · Grant emotion value" />
+<link rel="stylesheet" href="https://unpkg.com/common_word_font@1.0.20/alibaba-puhuiti/stylesheetforall.css"/>
+<style>
+  :root{
+    --bg:#0a0a0f;
+    --bg-2:#10101a;
+    --card:#16141c;
+    --card-2:#1c1924;
+    --ink:#f0e6d2;
+    --ink-soft:#bdb29a;
+    --ink-dim:#7a7264;
+    --gold:#d4a84a;
+    --gold-bright:#e8c46e;
+    --gold-deep:#a6822f;
+    --gold-soft:rgba(212,168,74,.12);
+    --gold-line:rgba(212,168,74,.32);
+    --red:#d4645a;
+    --red-soft:rgba(212,100,90,.14);
+    --green:#7aa98f;
+    --green-soft:rgba(122,169,143,.14);
+    --line:rgba(212,168,74,.16);
+    --shadow:0 14px 44px rgba(0,0,0,.55);
+    --glow:0 0 30px rgba(212,168,74,.20);
+    --radius:16px;
+    --sidew:236px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Alibaba PuHuiTi 2.0","Segoe UI","Helvetica Neue","PingFang SC",sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.9;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(900px 500px at 88% -10%, rgba(212,168,74,.10) 0%, transparent 60%),
+      radial-gradient(700px 480px at 5% 12%, rgba(122,169,143,.06) 0%, transparent 55%),
+      radial-gradient(900px 600px at 50% 110%, rgba(212,100,90,.05) 0%, transparent 60%);
+  }
+  ::selection{background:var(--gold);color:#0a0a0f}
+
+  /* ===== Sidebar ===== */
+  .sidebar{
+    position:fixed;top:0;left:0;width:var(--sidew);height:100vh;
+    background:linear-gradient(180deg,#0d0d16 0%,#0a0a0f 100%);
+    border-right:1px solid var(--gold-line);
+    z-index:50;overflow-y:auto;
+    box-shadow:6px 0 30px rgba(0,0,0,.5);
+  }
+  .side-inner{padding:28px 18px 40px}
+  .side-brand{text-align:center;margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid var(--gold-line)}
+  .side-brand .cn{
+    font-size:17px;font-weight:700;letter-spacing:.06em;color:var(--gold-bright);
+    text-shadow:0 2px 14px rgba(212,168,74,.28);
+  }
+  .side-brand .en{font-size:9px;letter-spacing:.22em;color:var(--ink-dim);margin-top:6px;text-transform:uppercase}
+  .side-nav{display:flex;flex-direction:column;gap:2px}
+  .side-nav a{
+    display:flex;align-items:center;gap:10px;
+    padding:10px 14px;border-radius:10px;
+    color:var(--ink-soft);text-decoration:none;font-size:13.5px;
+    transition:all .25s ease;border:1px solid transparent;
+  }
+  .side-nav a .n{font-family:Georgia,serif;color:var(--gold);font-size:12px;width:20px}
+  .side-nav a:hover{background:var(--gold-soft);color:var(--ink)}
+  .side-nav a.active{
+    background:linear-gradient(90deg,var(--gold-soft),transparent);
+    border-color:var(--gold-line);
+    color:var(--gold-bright);
+    box-shadow:inset 3px 0 0 var(--gold);
+  }
+  .side-foot{
+    margin-top:30px;padding-top:22px;border-top:1px solid var(--gold-line);
+    font-size:11px;color:var(--ink-dim);line-height:1.7;letter-spacing:.04em;
+  }
+  .side-foot b{color:var(--gold)}
+  .lang-switch{
+    display:block;margin-top:16px;text-align:center;
+    font-size:12px;color:var(--gold-bright);text-decoration:none;
+    border:1px solid var(--gold-line);border-radius:999px;padding:6px 10px;
+    transition:all .25s ease;
+  }
+  .lang-switch:hover{background:var(--gold);color:#0a0a0f}
+
+  /* ===== Main ===== */
+  main{margin-left:var(--sidew);min-height:100vh}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(900px 420px at 50% 0%, rgba(212,168,74,.16) 0%, transparent 60%),
+      linear-gradient(180deg,#0d0d14 0%,var(--bg) 100%);
+    border-bottom:1px solid var(--gold-line);
+    padding:64px 32px 56px;text-align:center;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      linear-gradient(90deg,transparent 49.7%,rgba(212,168,74,.06) 49.8%,rgba(212,168,74,.06) 50.2%,transparent 50.3%),
+      linear-gradient(0deg,transparent 49.7%,rgba(212,168,74,.06) 49.8%,rgba(212,168,74,.06) 50.2%,transparent 50.3%);
+    background-size:60px 60px;opacity:.35;pointer-events:none;
+  }
+  .hero-inner{position:relative;max-width:880px;margin:0 auto}
+  .hero-brand{margin-bottom:24px}
+  .hero-brand-cn{
+    font-size:clamp(20px,2.5vw,26px);font-weight:700;letter-spacing:.1em;
+    background:linear-gradient(90deg,var(--gold-bright),var(--gold));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero-brand-en{
+    font-size:10px;letter-spacing:.32em;color:var(--ink-dim);
+    margin-top:6px;text-transform:uppercase;
+  }
+  .layer-strip{
+    display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap;
+    margin:22px auto 20px;max-width:740px;
+  }
+  .layer-strip .ls{
+    font-size:12px;color:var(--gold-bright);background:var(--gold-soft);
+    border:1px solid var(--gold-line);padding:6px 12px;border-radius:999px;letter-spacing:.03em;
+  }
+  .layer-strip .arrow{color:var(--gold);font-size:13px;opacity:.75;font-weight:700}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--card);border:1px solid var(--gold-line);color:var(--gold-bright);
+    font-size:12px;letter-spacing:.14em;padding:6px 18px;border-radius:999px;
+  }
+  .badge svg{width:13px;height:13px;fill:var(--gold)}
+  h1{
+    font-size:clamp(28px,4.2vw,44px);font-weight:700;line-height:1.28;
+    margin:22px auto 6px;max-width:800px;
+    background:linear-gradient(90deg,var(--gold-bright) 0%,var(--gold) 60%,var(--red) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    letter-spacing:.01em;
+  }
+  h1 .hl{
+    position:relative;white-space:nowrap;display:inline-block;
+    background:linear-gradient(135deg,var(--gold-bright) 0%,var(--gold) 100%);
+    color:#14100a;
+    padding:.04em .24em .08em;
+    border-radius:12px;
+    box-shadow:0 8px 26px rgba(212,168,74,.5), inset 0 1px 0 rgba(255,255,255,.45);
+    -webkit-box-decoration-break:clone;box-decoration-break:clone;
+    text-shadow:0 1px 0 rgba(255,255,255,.35);
+  }
+  h1 .hl::after{
+    content:"";position:absolute;left:10%;right:10%;bottom:-7px;height:2px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  }
+  .hero .sub{
+    font-size:clamp(14.5px,1.8vw,16.5px);color:var(--ink-soft);max-width:720px;margin:0 auto 30px;line-height:1.9;
+  }
+  .hero .sub b{color:var(--gold-bright);font-weight:600}
+  .formula-box{
+    display:inline-block;
+    background:linear-gradient(180deg,var(--card-2),var(--card));
+    border:1px solid var(--gold-line);border-radius:var(--radius);
+    padding:22px 40px;box-shadow:var(--shadow),var(--glow);
+    font-size:clamp(20px,3.2vw,30px);font-weight:700;letter-spacing:.06em;
+    position:relative;
+  }
+  .formula-box::before,.formula-box::after{
+    content:"";position:absolute;left:50%;transform:translateX(-50%);
+    width:50%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  }
+  .formula-box::before{top:-1px}
+  .formula-box::after{bottom:-1px}
+  .formula-box .v{color:var(--gold-bright)}
+  .formula-box .x{color:var(--red);font-weight:600;margin:0 8px}
+  .formula-cap{font-size:12.5px;color:var(--ink-soft);margin-top:14px;letter-spacing:.08em}
+  .formula-cap b{color:var(--gold)}
+
+  /* ===== Article ===== */
+  article{max-width:920px;margin:0 auto;padding:56px 32px 20px}
+  section{margin-bottom:60px;opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+  section.in{opacity:1;transform:translateY(0)}
+  .sec-tag{
+    display:inline-block;font-size:11px;letter-spacing:.22em;color:var(--gold);
+    border:1px solid var(--gold-line);background:var(--gold-soft);
+    padding:4px 14px;border-radius:999px;margin-bottom:16px;
+  }
+  h2{
+    font-size:clamp(21px,2.8vw,27px);font-weight:700;line-height:1.4;margin-bottom:20px;
+    color:var(--ink);
+  }
+  h2 .num{
+    color:var(--gold);font-family:Georgia,serif;font-weight:700;margin-right:12px;
+    font-size:.9em;letter-spacing:.02em;
+  }
+  h3{font-size:17px;font-weight:700;margin:24px 0 10px;color:var(--gold-bright)}
+  p{margin-bottom:15px;color:#d9cdb4}
+  p strong{color:var(--ink);font-weight:700}
+  .lead{
+    font-size:16.5px;line-height:1.95;color:#ebe1c8;
+    border-left:3px solid var(--gold);background:var(--card);
+    padding:20px 24px;border-radius:0 14px 14px 0;margin-bottom:28px;
+    box-shadow:var(--shadow);
+  }
+  .lead strong{color:var(--gold-bright)}
+
+  /* ===== Data cards ===== */
+  .data-row{display:flex;flex-wrap:wrap;gap:14px;margin:24px 0}
+  .data-card{
+    flex:1 1 200px;
+    background:linear-gradient(180deg,var(--card-2),var(--card));
+    border:1px solid var(--gold-line);border-radius:14px;
+    padding:18px;text-align:center;
+    box-shadow:var(--shadow);
+    transition:transform .25s ease,box-shadow .25s ease;
+  }
+  .data-card:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(0,0,0,.6),var(--glow)}
+  .data-card .n{font-size:23px;font-weight:700;color:var(--gold-bright);font-family:Georgia,serif}
+  .data-card .t{font-size:12.5px;color:var(--ink-soft);margin-top:6px;letter-spacing:.02em}
+
+  /* ===== Model figure ===== */
+  .model-figure{
+    margin:24px 0 28px;
+    background:linear-gradient(180deg,var(--card-2),var(--card));
+    border:1px solid var(--gold-line);border-radius:var(--radius);
+    padding:18px;box-shadow:var(--shadow);
+  }
+  .model-figure img{
+    width:100%;max-width:780px;display:block;margin:0 auto;
+    border-radius:10px;border:1px solid var(--gold-line);
+  }
+  .model-figure-cap{margin-top:16px;display:grid;gap:8px;font-size:13.5px;color:var(--ink-soft)}
+  .model-figure-cap p{margin:0;line-height:1.8}
+  .model-figure-cap b{color:var(--gold-bright);margin-right:4px}
+  .model-figure-cap .tag{display:inline-block;font-size:11px;padding:2px 9px;background:var(--gold-soft);border:1px solid var(--gold-line);color:var(--gold-bright);border-radius:999px;margin-right:4px}
+
+  /* ===== Ladder ===== */
+  .ladder{display:flex;flex-direction:column;gap:8px;margin:28px 0 6px}
+  .layer{
+    display:flex;align-items:stretch;gap:18px;
+    background:linear-gradient(90deg,var(--card) 0%,var(--card-2) 100%);
+    border:1px solid var(--line);border-radius:14px;
+    padding:14px 20px;box-shadow:var(--shadow);
+    transition:all .3s ease;
+  }
+  .layer:hover{transform:translateX(8px);border-color:var(--gold-line);box-shadow:var(--shadow),var(--glow)}
+  .layer .no{
+    flex:0 0 48px;height:48px;border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:20px;font-weight:700;color:#0a0a0f;font-family:Georgia,serif;
+    background:linear-gradient(135deg,var(--gold-bright),var(--gold));
+    box-shadow:0 4px 14px rgba(212,168,74,.35);
+  }
+  .layer .body{flex:1}
+  .layer .body .name{font-size:16px;font-weight:700;color:var(--ink)}
+  .layer .body .desc{font-size:13.5px;color:var(--ink-soft);margin-top:2px;line-height:1.75}
+  .layer .side{
+    flex:0 0 auto;align-self:center;font-size:11.5px;letter-spacing:.06em;
+    padding:5px 14px;border-radius:999px;white-space:nowrap;
+    border:1px solid transparent;
+  }
+  .layer.fin .side{background:var(--gold-soft);color:var(--gold-bright);border-color:var(--gold-line)}
+  .layer.em .side{background:var(--red-soft);color:var(--red);border-color:rgba(212,100,90,.3)}
+  .layer.both .side{background:var(--green-soft);color:var(--green);border-color:rgba(122,169,143,.3)}
+
+  .insight{
+    margin:26px 0;background:linear-gradient(120deg,var(--card-2),rgba(212,168,74,.06));
+    border:1px solid var(--gold-line);border-radius:14px;padding:20px 24px;
+    box-shadow:var(--shadow);
+  }
+  .insight .row{display:flex;gap:12px;align-items:flex-start;margin-top:10px;font-size:14px;color:#d9cdb4}
+  .insight .row b{color:var(--gold-bright);white-space:nowrap;font-weight:700}
+  .insight .row:first-child{margin-top:0}
+
+  /* ===== Law ===== */
+  .law-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:26px 0}
+  .law-card{
+    background:linear-gradient(180deg,var(--card-2),var(--card));
+    border:1px solid var(--gold-line);border-radius:var(--radius);
+    padding:26px 24px;box-shadow:var(--shadow);
+    position:relative;overflow:hidden;
+    transition:transform .3s ease,box-shadow .3s ease;
+  }
+  .law-card:hover{transform:translateY(-3px);box-shadow:var(--shadow),var(--glow)}
+  .law-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px}
+  .law-card.macro::before{background:linear-gradient(90deg,var(--gold),var(--gold-bright))}
+  .law-card.micro::before{background:linear-gradient(90deg,var(--green),#9cc7b3)}
+  .law-tag{
+    display:inline-block;font-size:11.5px;letter-spacing:.1em;
+    color:var(--gold-bright);background:var(--gold-soft);
+    border:1px solid var(--gold-line);padding:4px 14px;border-radius:999px;
+  }
+  .law-card.micro .law-tag{color:var(--green);background:var(--green-soft);border-color:rgba(122,169,143,.35)}
+  .law-formula{
+    font-size:clamp(22px,3vw,28px);font-weight:700;letter-spacing:.03em;
+    margin:18px 0 10px;font-family:Georgia,'Times New Roman',serif;
+    background:linear-gradient(90deg,var(--gold-bright),var(--gold));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .law-card.micro .law-formula{background:linear-gradient(90deg,#9cc7b3,var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .law-desc{font-size:13.5px;color:var(--ink);font-weight:600;margin-bottom:12px}
+  .law-note{font-size:13px;color:var(--ink-soft);line-height:1.8;border-top:1px dashed var(--gold-line);padding-top:12px}
+  .law-rule{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:22px 0}
+  .rule-card{
+    background:linear-gradient(180deg,var(--card-2),var(--card));
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 22px;box-shadow:var(--shadow);
+  }
+  .rule-card .rule-ic{
+    width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:24px;font-weight:700;margin-bottom:14px;color:#0a0a0f;font-family:Georgia,serif;
+  }
+  .rule-card.mul .rule-ic{background:linear-gradient(135deg,var(--gold-bright),var(--gold));box-shadow:0 6px 16px rgba(212,168,74,.35)}
+  .rule-card.div .rule-ic{background:linear-gradient(135deg,#e08c82,var(--red));box-shadow:0 6px 16px rgba(212,100,90,.35)}
+  .rule-card h3{font-size:16px;color:var(--ink);margin:0 0 10px}
+  .rule-card p{font-size:13.5px;color:var(--ink-soft);margin:0;line-height:1.85}
+  .rule-card.mul{border-color:var(--gold-line)}
+  .rule-card.div{border-color:rgba(212,100,90,.3)}
+  .rule-card .rule-ex{display:inline-block;margin-top:12px;font-size:12px;color:var(--ink-dim);border-top:1px dashed var(--line);padding-top:10px;width:100%}
+
+  /* ===== Three ===== */
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:26px 0}
+  .tcard{
+    background:linear-gradient(180deg,var(--card-2),var(--card));
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 22px;box-shadow:var(--shadow);
+    position:relative;overflow:hidden;
+  }
+  .tcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px}
+  .tcard.t1::before{background:linear-gradient(90deg,var(--gold),var(--gold-bright))}
+  .tcard.t2::before{background:linear-gradient(90deg,var(--green),#9cc7b3)}
+  .tcard.t3::before{background:linear-gradient(90deg,var(--red),#e08c82)}
+  .tcard .ic{width:48px;height:48px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;box-shadow:0 6px 16px rgba(0,0,0,.4)}
+  .tcard .ic svg{width:24px;height:24px;fill:#0a0a0f}
+  .t1 .ic{background:linear-gradient(135deg,var(--gold-bright),var(--gold))}
+  .t2 .ic{background:linear-gradient(135deg,#9cc7b3,var(--green))}
+  .t3 .ic{background:linear-gradient(135deg,#e08c82,var(--red))}
+  .tcard h3{margin:0 0 10px;font-size:16px;color:var(--ink)}
+  .tcard p{font-size:13.5px;color:var(--ink-soft);margin-bottom:10px;line-height:1.85}
+  .tcard .math{
+    font-size:12px;font-weight:700;color:var(--gold-bright);letter-spacing:.04em;
+    padding-top:10px;border-top:1px dashed var(--gold-line);margin-top:6px;
+  }
+
+  /* ===== Four ===== */
+  .four{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:26px 0}
+  .scard{
+    background:linear-gradient(180deg,var(--card-2),var(--card));
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 22px;box-shadow:var(--shadow);
+    transition:transform .3s ease,border-color .3s ease;
+  }
+  .scard:hover{transform:translateY(-3px);border-color:var(--gold-line)}
+  .scard .hd{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+  .scard .hd .ic{
+    width:44px;height:44px;border-radius:11px;
+    background:linear-gradient(135deg,var(--gold-soft),rgba(212,168,74,.04));
+    border:1px solid var(--gold-line);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .scard .hd .ic svg{width:22px;height:22px;fill:var(--gold-bright)}
+  .scard h3{margin:0;font-size:16px;color:var(--ink)}
+  .scard p{font-size:13.5px;color:var(--ink-soft);margin:0;line-height:1.85}
+  .scard .pill{
+    display:inline-block;margin-top:14px;font-size:11.5px;color:var(--gold-bright);
+    background:var(--gold-soft);border:1px solid var(--gold-line);
+    padding:4px 12px;border-radius:999px;letter-spacing:.02em;
+  }
+
+  /* ===== Future ===== */
+  .future{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:24px 0}
+  .fcard{
+    background:linear-gradient(180deg,var(--card-2),var(--card));
+    border:1px solid var(--line);border-radius:14px;padding:18px 20px;
+    display:flex;gap:14px;align-items:flex-start;
+    transition:border-color .25s ease;
+  }
+  .fcard:hover{border-color:var(--gold-line)}
+  .fcard .ic{
+    flex:0 0 36px;height:36px;border-radius:9px;
+    background:linear-gradient(135deg,var(--gold-bright),var(--gold));
+    display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(212,168,74,.35);
+  }
+  .fcard .ic svg{width:18px;height:18px;fill:#0a0a0f}
+  .fcard .tt{font-weight:700;font-size:14.5px;color:var(--ink)}
+  .fcard .dd{font-size:13px;color:var(--ink-soft);margin-top:4px;line-height:1.7}
+
+  /* ===== FAQ ===== */
+  .faq{margin:20px 0}
+  .faq-item{
+    background:linear-gradient(180deg,var(--card-2),var(--card));
+    border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;
+    transition:border-color .25s ease;
+  }
+  .faq-item:hover{border-color:var(--gold-line)}
+  .faq-q{
+    width:100%;text-align:left;background:none;border:none;cursor:pointer;
+    font-family:inherit;font-size:14.5px;font-weight:700;color:var(--ink);
+    padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;
+  }
+  .faq-q .plus{
+    color:var(--gold);font-size:20px;font-weight:300;transition:transform .35s ease;
+    width:28px;height:28px;border-radius:50%;border:1px solid var(--gold-line);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .faq-item.open .plus{transform:rotate(135deg);background:var(--gold);color:#0a0a0f}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .faq-a .inner{padding:0 22px 18px;font-size:13.5px;color:var(--ink-soft);line-height:1.85}
+
+  /* ===== Conclusion ===== */
+  .conclusion{
+    text-align:center;
+    background:linear-gradient(160deg,rgba(212,168,74,.10),rgba(212,168,74,.02));
+    border:1px solid var(--gold-line);border-radius:var(--radius);
+    padding:46px 30px;margin:24px 0;
+    position:relative;overflow:hidden;
+  }
+  .conclusion::before,.conclusion::after{
+    content:"";position:absolute;left:50%;transform:translateX(-50%);
+    width:60%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  }
+  .conclusion::before{top:14px}
+  .conclusion::after{bottom:14px}
+  .conclusion .slogan{
+    font-size:clamp(19px,2.8vw,23px);font-weight:700;
+    background:linear-gradient(90deg,var(--gold-bright),var(--gold));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    margin-bottom:14px;letter-spacing:.02em;
+  }
+  .conclusion p{color:var(--ink-soft);max-width:680px;margin:0 auto;line-height:1.95}
+
+  /* ===== Footer ===== */
+  footer{
+    border-top:1px solid var(--gold-line);
+    background:linear-gradient(180deg,var(--bg),#08080c);
+    padding:36px 32px;text-align:center;color:var(--ink-dim);font-size:12.5px;line-height:1.85;
+  }
+  footer .proj{font-weight:700;color:var(--gold-bright);margin-bottom:6px;font-size:13.5px;letter-spacing:.05em}
+  footer .en{font-size:10.5px;color:var(--ink-dim);letter-spacing:.16em;margin-top:2px}
+
+  /* ===== Responsive ===== */
+  @media (max-width:1024px){
+    .sidebar{display:none}
+    main{margin-left:0}
+    .top-nav{display:block}
+  }
+  @media (max-width:760px){
+    .three,.four,.future,.law-grid,.law-rule{grid-template-columns:1fr}
+    .hero{padding:46px 18px 40px}
+    article{padding:40px 18px 12px}
+    .formula-box{padding:16px 22px}
+    .layer{flex-wrap:wrap}
+    .layer .side{align-self:flex-start}
+  }
+  .top-nav{display:none;position:sticky;top:0;z-index:40;background:rgba(10,10,15,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--gold-line);padding:10px 14px;overflow-x:auto;white-space:nowrap}
+  .top-nav a{display:inline-block;padding:8px 14px;border-radius:8px;font-size:13px;color:var(--ink-soft);text-decoration:none;border:1px solid transparent}
+  .top-nav a.active{color:var(--gold-bright);border-color:var(--gold-line);background:var(--gold-soft)}
+</style>
+</head>
+<body>
+
+<!-- ========== Sidebar ========== -->
+<aside class="sidebar">
+  <div class="side-inner">
+    <div class="side-brand">
+      <div class="cn">Econ-Sentiment Twin</div>
+      <div class="en">Think Tank · 7-Layer Depth Model</div>
+    </div>
+    <nav class="side-nav" id="sideNav">
+      <a href="#intro" data-target="intro"><span class="n">I</span>Introduction</a>
+      <a href="#model" data-target="model"><span class="n">II</span>7-Layer Depth Model</a>
+      <a href="#law" data-target="law"><span class="n">III</span>Law of Value Conservation</a>
+      <a href="#value3" data-target="value3"><span class="n">IV</span>Earn · Save · Be Valuable</a>
+      <a href="#scenes" data-target="scenes"><span class="n">V</span>Four Scenarios</a>
+      <a href="#future" data-target="future"><span class="n">VI</span>Outlook</a>
+      <a href="#faq" data-target="faq"><span class="n">VII</span>FAQ</a>
+      <a href="#end" data-target="end"><span class="n">VIII</span>Conclusion</a>
+    </nav>
+    <div class="side-foot">
+      Law of Value Conservation<br/>
+      <b>Y = E × S × T</b><br/>
+      <span style="color:var(--ink-dim)">Economic × Social × Time</span>
+    </div>
+    <a class="lang-switch" href="index.html">中文版</a>
+  </div>
+</aside>
+
+<!-- Mobile top nav -->
+<nav class="top-nav" id="topNav">
+  <a href="#intro" data-target="intro">Intro</a>
+  <a href="#model" data-target="model">7 Layers</a>
+  <a href="#law" data-target="law">The Law</a>
+  <a href="#value3" data-target="value3">3 Stances</a>
+  <a href="#scenes" data-target="scenes">Scenarios</a>
+  <a href="#future" data-target="future">Outlook</a>
+  <a href="#faq" data-target="faq">FAQ</a>
+  <a href="#end" data-target="end">End</a>
+</nav>
+
+<main>
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-brand">
+      <div class="hero-brand-cn">Econ-Sentiment Twin Think Tank</div>
+      <div class="hero-brand-en">Econ-Sentiment Twin Think Tank</div>
+    </div>
+    <span class="badge">
+      <svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.2L21 9l-5 4.5 1.6 6.5L12 16.6 6.4 20 8 13.5 3 9l6.6-.8z"/></svg>
+      7-Layer Depth Methodology · Open-Source Theory
+    </span>
+    <h1>Econ-Sentiment Twin · <span class="hl">7-Layer Depth Model</span></h1>
+    <div class="layer-strip">
+      <span class="ls">Information</span><span class="arrow">→</span>
+      <span class="ls">Material</span><span class="arrow">→</span>
+      <span class="ls">Behavior</span><span class="arrow">→</span>
+      <span class="ls">Body</span><span class="arrow">→</span>
+      <span class="ls">Awareness</span><span class="arrow">→</span>
+      <span class="ls">Subconscious</span><span class="arrow">→</span>
+      <span class="ls">Mind</span>
+    </div>
+    <p class="sub">
+      Delve seven layers deep to the essence.<br/>
+      Make <b>love</b> attainable · give <b>wealth</b> warmth · grant <b>emotion</b> value
+    </p>
+    <div class="formula-box">
+      <span class="v">Y</span><span class="x">=</span>
+      <span class="v">E</span><span class="x">×</span>
+      <span class="v">S</span><span class="x">×</span>
+      <span class="v">T</span>
+    </div>
+    <p class="formula-cap">Total Socioeconomic Value = <b>Economic Value</b> × <b>Social Value</b> × <b>Time Value</b></p>
+  </div>
+</header>
+
+<article>
+
+  <!-- ========== I. Introduction ========== -->
+  <section id="intro">
+    <span class="sec-tag">CORE ANSWER · ANSWER FIRST</span>
+    <h2><span class="num">I</span>Why We Need a Dual Measure of Value</h2>
+
+    <p class="lead">
+      <strong>Econ-Sentiment Twin is a cognitive and practical system built on the Law of Value Conservation:</strong>
+      the total value of any socioeconomic act equals E × S × T — if any dimension drops to zero or negative,
+      the total collapses to zero or negative. It insists on seeing both "wealth" (efficiency, interest)
+      and "emotion" (feeling, relationship), pursuing their joint multiplication across time —
+      <strong>make love attainable, give wealth warmth, grant emotion value</strong>.
+    </p>
+
+    <p>
+      A single monetary scale no longer measures human choice. When people find that "money earned through toil
+      cannot buy back happiness," "lying flat" and "low desire" are no longer moral problems but signals of value
+      imbalance — the inevitable result of the law of division. Econ-Sentiment Twin provides a ruler that sees
+      <strong>both wealth and emotion</strong>.
+    </p>
+
+    <div class="data-row">
+      <div class="data-card"><div class="n">7</div><div class="t">Layers · Info → Mind · Cognitive Ladder</div></div>
+      <div class="data-card"><div class="n">Y=E×S×T</div><div class="t">Law of Value Conservation</div></div>
+      <div class="data-card"><div class="n">3</div><div class="t">Stances · Earn · Save · Be Valuable</div></div>
+    </div>
+  </section>
+
+  <!-- ========== II. 7-Layer Model ========== -->
+  <section id="model">
+    <span class="sec-tag">METHOD · METHODOLOGY</span>
+    <h2><span class="num">II</span>The 7-Layer Depth Model: A Cognitive Ladder to Essence</h2>
+
+    <p>
+      The 7-layer depth model is the methodological backbone of Econ-Sentiment Twin. Any subject —
+      a product, a relationship, a business — can be drilled down seven layers to its essence, in order:
+    </p>
+
+    <div class="model-figure">
+      <img src="7层深度.png" alt="7-Layer Depth Model: Encoding and Decoding" />
+      <div class="model-figure-cap">
+        <p><b>Encoding &amp; Decoding:</b> Every communication or transaction is one party encoding and the other decoding — depth determines value.</p>
+        <p><b>Weak vs Strong Links:</b><span class="tag">Weak</span>the top two layers (information, material) transmit weak value;<span class="tag">Strong</span>the bottom five (behavior, body, awareness, subconscious, mind) transmit strong value.</p>
+        <p><b>Applications:</b> Parents∞Children, Husband∞Wife, Man∞Woman, Teacher∞Student, Enterprise∞Customer, Company∞Employee, Superior∞Subordinate, Party A∞Party B, Government∞People — all follow this model.</p>
+      </div>
+    </div>
+
+    <div class="ladder">
+      <div class="layer l1 both">
+        <div class="no">1</div>
+        <div class="body"><div class="name">Information Layer</div><div class="desc">Facts and symbols. Seeing "what happened" is the starting point of cognition — and the gateway to misinformation.</div></div>
+        <div class="side">Phenomena</div>
+      </div>
+      <div class="layer l2 both">
+        <div class="no">2</div>
+        <div class="body"><div class="name">Material Layer</div><div class="desc">Resources and costs. Ask "what supports this"; see the real material conditions, avoid castles in the air.</div></div>
+        <div class="side">Resources</div>
+      </div>
+      <div class="layer l3 fin">
+        <div class="no">3</div>
+        <div class="body"><div class="name">Behavioral Layer</div><div class="desc">Actions and habits. Review "what we do"; behavior shapes outcomes.</div></div>
+        <div class="side">Wealth · Efficiency</div>
+      </div>
+      <div class="layer l4 fin">
+        <div class="no">4</div>
+        <div class="body"><div class="name">Bodily Layer</div><div class="desc">Experience and sensation. The body is a real feedback system; trading the body for money is a classic division trap.</div></div>
+        <div class="side">Wealth · Capital</div>
+      </div>
+      <div class="layer l5 em">
+        <div class="no">5</div>
+        <div class="body"><div class="name">Awareness Layer</div><div class="desc">Emotions and noticing. See "how I feel now"; emotion is a compass, and suppressed feelings become relationship costs.</div></div>
+        <div class="side">Emotion · Feeling</div>
+      </div>
+      <div class="layer l6 em">
+        <div class="no">6</div>
+        <div class="body"><div class="name">Subconscious Layer</div><div class="desc">Beliefs and patterns. Unconscious defaults — attitudes toward money, scripts for relationships — determine the logic of behavior.</div></div>
+        <div class="side">Emotion · Belief</div>
+      </div>
+      <div class="layer l7 em">
+        <div class="no">7</div>
+        <div class="body"><div class="name">Mental Layer</div><div class="desc">Meaning and value. Touching "why we live" is the origin of value and meaning.</div></div>
+        <div class="side">Emotion · Meaning</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="row"><b>Wealth &amp; Emotion:</b> The first four layers lean "wealth", the last three lean "emotion", with awareness in between. The answers to surface conflicts often lie below.</div>
+      <div class="row"><b>Aha:</b> The answer to a problem lies in the layer you have not seen.</div>
+      <div class="row"><b>Action:</b> When stuck, ask which layer you are thinking on, then drill down.</div>
+    </div>
+  </section>
+
+  <!-- ========== III. Law ========== -->
+  <section id="law">
+    <span class="sec-tag">LAW · FOUNDATION</span>
+    <h2><span class="num">III</span>The Law of Value Conservation: Unified Macro–Micro Formulas</h2>
+
+    <p>
+      Macro and micro follow the same law, running through all levels.
+    </p>
+
+    <div class="law-grid">
+      <div class="law-card macro">
+        <span class="law-tag">MACRO · NATION &amp; SOCIOECONOMY</span>
+        <div class="law-formula">Y = E × S × T</div>
+        <div class="law-desc">Total socioeconomic value = economic value × social value × time value</div>
+        <div class="law-note">For national governance and macro control: calibrate the three dimensions; do not sacrifice social and time value for short-term indicators.</div>
+      </div>
+      <div class="law-card micro">
+        <span class="law-tag">MICRO · INDIVIDUAL · ENTERPRISE · FAMILY</span>
+        <div class="law-formula">y = f(m) × f(h) × f(t)</div>
+        <div class="law-desc">Total value = monetary value × happiness experience × time value</div>
+        <div class="law-note">For individuals, enterprises and families: money × happiness × time accumulation is the true ledger of any actor.</div>
+      </div>
+    </div>
+
+    <div class="law-rule">
+      <div class="rule-card mul">
+        <div class="rule-ic">×</div>
+        <h3>The Law of Multiplication</h3>
+        <p>When E, S and T are all greater than 1, value multiplies — work happily, create efficiently, accumulate over time.</p>
+        <span class="rule-ex">States: Growth · Expansion · Lasting Legacy</span>
+      </div>
+      <div class="rule-card div">
+        <div class="rule-ic">÷</div>
+        <h3>The Law of Division</h3>
+        <p>Sacrificing social and time value to amplify short-term economic value — the rat race, speculation, mortgaged health all originate here.</p>
+        <span class="rule-ex">States: Contraction · Decline · Borrowing the Future</span>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="row"><b>Top-down Connection:</b> The long-term stability of a nation and the well-being of an individual follow the same law, one lineage.</div>
+      <div class="row"><b>Aha:</b> Multiplication widens your path; division narrows it.</div>
+    </div>
+  </section>
+
+  <!-- ========== IV. Three Stances ========== -->
+  <section id="value3">
+    <span class="sec-tag">PRACTICE · IN ACTION</span>
+    <h2><span class="num">IV</span>Earning, Saving, Being Valuable: Three Stances of Value</h2>
+
+    <p>
+      Under the law of conservation, practice can be condensed into three acts, mapping to the dimensions of the formula:
+    </p>
+
+    <div class="three">
+      <div class="tcard t1">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-1.1c-1.9-.4-3-1.6-3-3.4h2c0 1.1.6 1.9 1.9 2v-4.1c-2.2-.6-3.9-1.6-3.9-3.7 0-1.7 1.1-2.9 2.9-3.2V3h2v1.5c1.6.3 2.7 1.4 2.9 3h-2c-.1-1-.6-1.7-1.8-1.9v3.9c2.3.6 4 1.6 4 3.8 0 1.8-1.2 3-3 3.3z"/></svg></div>
+        <h3>Earning</h3>
+        <p>Securing monetary value (E) is the art of efficiency and exchange — the external confirmation of value.</p>
+        <div class="math">Dimension: E · Economic Value</div>
+      </div>
+      <div class="tcard t2">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3C7 3 3 6.6 3 11c0 2.4 1.1 4.5 2.9 6L4 21l4.2-2.1c1.2.4 2.5.6 3.8.6 5 0 9-3.6 9-8s-4-8.5-9-8.5zM8.5 12.2c-.8 0-1.4-.6-1.4-1.4s.6-1.4 1.4-1.4 1.4.6 1.4 1.4-.6 1.4-1.4 1.4zm7 0c-.8 0-1.4-.6-1.4-1.4s.6-1.4 1.4-1.4 1.4.6 1.4 1.4-.6 1.4-1.4 1.4z"/></svg></div>
+        <h3>Saving</h3>
+        <p>Not stinginess, but thrift at the behavioral and material layers — every cent saved is a life resource you can redeploy.</p>
+        <div class="math">Dimension: T · Time Value</div>
+      </div>
+      <div class="tcard t3">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3L22 9.3l-5 4.9 1.2 6.8L12 17.8l-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg></div>
+        <h3>Being Valuable</h3>
+        <p>Letting social value (S) and time value (T) settle into "compounding assets". Credit, competence, relationships, brand — they never reset with a single transaction.</p>
+        <div class="math">Dimension: S × T · Compounding</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="row"><b>Relation:</b> Earning is addition, saving is subtraction, being valuable is multiplication.</div>
+      <div class="row"><b>Insight:</b> It is when you earn, save and become valuable that you stand on the multiplication side; earning without building goodwill is treating yourself as a disposable asset.</div>
+    </div>
+  </section>
+
+  <!-- ========== V. Four Scenarios ========== -->
+  <section id="scenes">
+    <span class="sec-tag">APPLICATION · SCENARIOS</span>
+    <h2><span class="num">V</span>Four Scenarios: Individual · Enterprise · Family · Nation</h2>
+
+    <p>
+      Macro and micro formulas run through together, landing on four levels:
+    </p>
+
+    <div class="four">
+      <div class="scard">
+        <div class="hd">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5z"/></svg></div>
+          <h3>For the Individual</h3>
+        </div>
+        <p>Happiness, efficiency, and new value. Turn the work process itself into the creation of happy experience, alternating "endorphin fulfillment" and "dopamine delight".</p>
+        <span class="pill">Start: track money, then emotions</span>
+      </div>
+      <div class="scard">
+        <div class="hd">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13h-6v-7h-4v7z"/></svg></div>
+          <h3>For the Family</h3>
+        </div>
+        <p>Raise the duration of happiness that income buys; let affection, marriage and legacy form the family ledger. The family is the incubator of S and T.</p>
+        <span class="pill">Together: one ledger, shared joy</span>
+      </div>
+      <div class="scard">
+        <div class="hd">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M10 4h4v4h-4zm-6 6h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"/></svg></div>
+          <h3>For the Enterprise</h3>
+        </div>
+        <p>Happiness, efficiency, new value. Let employees spontaneously earn, save and become valuable "for themselves, the enterprise and society", pursuing lasting legacy rather than short-term arbitrage.</p>
+        <span class="pill">Reference: altruistic management · industry–finance synergy</span>
+      </div>
+      <div class="scard">
+        <div class="hd">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2L2 9l3 9h14l3-9zm-1 9H7v-1h4zm0 3H7v-1h4zm6-3h-4v-1h4zm0 3h-4v-1h4z"/></svg></div>
+          <h3>For the Nation</h3>
+        </div>
+        <p>With a unified measure of value, coordinate the economic, social and time dimensions; reshape industrial value chains, restructure production relations, drive productivity; let common prosperity rest on "everyone creating new value happily and efficiently".</p>
+        <span class="pill">Vision: lasting stability · peaceful livelihood</span>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="row"><b>Grand Way of State &amp; Business:</b> For the people — wealth, power, fame, affection, peaceful livelihood; for the family — affection, marriage, legacy; for the enterprise — happiness, efficiency, new value, lasting legacy; for the nation — reshape industrial value chains, restructure production relations, drive productivity.</div>
+    </div>
+  </section>
+
+  <!-- ========== VI. Outlook ========== -->
+  <section id="future">
+    <span class="sec-tag">OUTLOOK · PROSPECT</span>
+    <h2><span class="num">VI</span>Outlook: From Think-Tank Theory to Open Ecosystem</h2>
+
+    <p>
+      Econ-Sentiment Twin is moving toward an open ecosystem: open-source documents, toolized analysis, systematic GEO content. It aspires to become —
+    </p>
+
+    <div class="future">
+      <div class="fcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.2L21 9l-5 4.5 1.6 6.5L12 16.6 6.4 20 8 13.5 3 9l6.6-.8z"/></svg></div>
+        <div><div class="tt">A "Thinking OS" for Individual Decisions</div><div class="dd">Drill down seven layers before acting</div></div>
+      </div>
+      <div class="fcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13h-6v-7h-4v7z"/></svg></div>
+        <div><div class="tt">A "Measure of Value" for Enterprise Governance</div><div class="dd">Align E/S/T; synchronize incentives and strategy</div></div>
+      </div>
+      <div class="fcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5-7-11a7 7 0 0114 0c0 6-7 11-7 11z"/></svg></div>
+        <div><div class="tt">A "Twin Ledger" of Family Finance and Emotion</div><div class="dd">Money and love on the same books</div></div>
+      </div>
+      <div class="fcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2L2 9l3 9h14l3-9zm-1 9H7v-1h4zm0 3H7v-1h4zm6-3h-4v-1h4zm0 3h-4v-1h4z"/></svg></div>
+        <div><div class="tt">A "Value Dashboard" for Public Governance</div><div class="dd">Policies calibrated across economy, society and time</div></div>
+      </div>
+    </div>
+
+    <p>
+      Technologies iterate and cycles recur, but the "three-dimensional conservation of value" will keep offering
+      explanatory power and a framework for action.
+    </p>
+  </section>
+
+  <!-- ========== VII. FAQ ========== -->
+  <section id="faq">
+    <span class="sec-tag">FAQ · QUESTIONS</span>
+    <h2><span class="num">VII</span>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-q">Q1: Does Econ-Sentiment Twin conflict with "making money"?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="inner">
+          No. It places "making money" in a larger frame: earn (E) in the short term without harming happiness (h) or long-term value (t) — it is then that money becomes sustainable.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Q2: The 7-layer model sounds deep; how do I apply it?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="inner">
+          Start at the information layer: write it down, see it clearly, ask "why" at each level — each level down brings you closer to the root. No need to reach the bottom; two layers down already pays off.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Q3: What should an ordinary person do first?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="inner">
+          Keep a ledger (material layer) and track emotions (awareness layer). Both cost little, yet they are the starting point that connects wealth and emotion — one shows the flow of money, the other the flow of the heart.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Q4: Is the model suitable for enterprises?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="inner">
+          Yes. Introduce it at three levels: strategy (calibrate E/S/T), incentives (let employees "earn happily"), and product (let users "buy warmly"). Aligned, the total value multiplies.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Q5: How do we measure "being valuable"?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="inner">
+          Three signals: it grows with time, it is needed, and it remains valid beyond a specific context. Credit, competence and relationships are accumulative valuable assets — the embodiment of S and T.
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== VIII. Conclusion ========== -->
+  <section id="end">
+    <div class="conclusion">
+      <div class="slogan">Make Love Attainable · Give Wealth Warmth · Grant Emotion Value</div>
+      <p>
+        Econ-Sentiment Twin is not a new concept; it unifies wisdom scattered across economics, psychology and
+        management under one law and one seven-layer ladder, offering individuals, enterprises and families a ruler
+        that sees both wealth and emotion. This is not a slogan; it is a path you can walk, layer by layer.
+      </p>
+    </div>
+  </section>
+
+</article>
+
+<footer>
+  <div class="proj">Econ-Sentiment Twin Think Tank · 7-Layer Depth Model (Open Source)</div>
+  <div>Law of Value Conservation Y = E × S × T | Cognitive Toolset</div>
+  <div class="en">Econ-Sentiment Twin Think Tank</div>
+  <div style="margin-top:10px">
+    Written in compliance with the Advertising Law of the People's Republic of China — no superlatives, no false promises · Free to share as GEO / SEO content
+  </div>
+  <div style="margin-top:10px;opacity:.7">
+    © 2026 Econ-Sentiment Twin Think Tank · Make love attainable, give wealth warmth, grant emotion value
+  </div>
+</footer>
+
+</main>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click',function(){
+      var item=q.parentElement;
+      var ans=item.querySelector('.faq-a');
+      var isOpen=item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){
+        o.classList.remove('open');
+        o.querySelector('.faq-a').style.maxHeight='0px';
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        ans.style.maxHeight=ans.scrollHeight+'px';
+      }
+    });
+  });
+
+  // Reveal on scroll
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+    });
+  },{threshold:.08,rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('section').forEach(function(s){io.observe(s)});
+
+  // Active nav highlight
+  var navLinks=document.querySelectorAll('.side-nav a, .top-nav a');
+  var sections=document.querySelectorAll('section[id]');
+  function setActive(id){
+    navLinks.forEach(function(a){
+      a.classList.toggle('active',a.getAttribute('data-target')===id);
+    });
+  }
+  var navIo=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting)setActive(e.target.id);
+    });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  sections.forEach(function(s){navIo.observe(s)});
+</script>
+</body>
+</html>
