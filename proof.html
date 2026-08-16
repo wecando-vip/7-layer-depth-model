@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>7层深度模型论证 · 心理学史的收敛解 — 财情双生智库</title>
+<meta name="description" content="论证：7层深度模型如何整合心理学各流派（参照心理学发展史），以价值守恒定律微观与宏观公式论证其价值（挣钱·省钱·值钱），如何触发良性循环的自我调节，实现个人、企业、国家共赢与高质量发展。" />
+<meta name="keywords" content="7层深度模型,心理学发展史,价值守恒定律,挣钱省钱值钱,自我调节,高质量发展,财情双生" />
+<meta property="og:title" content="7层深度模型论证 · 心理学史的收敛解" />
+<meta property="og:description" content="把心理学百年各流派放回七层阶梯，用价值守恒定律论证共赢与高质量发展" />
+<link rel="stylesheet" href="https://unpkg.com/common_word_font@1.0.20/alibaba-puhuiti/stylesheetforall.css"/>
+<style>
+  :root{
+    --bg:#0a0a0f;--bg-2:#10101a;--card:#16141c;--card-2:#1c1924;
+    --ink:#f0e6d2;--ink-soft:#bdb29a;--ink-dim:#7a7264;
+    --gold:#d4a84a;--gold-bright:#e8c46e;--gold-deep:#a6822f;
+    --gold-soft:rgba(212,168,74,.12);--gold-line:rgba(212,168,74,.32);
+    --red:#d4645a;--red-soft:rgba(212,100,90,.14);
+    --green:#7aa98f;--green-soft:rgba(122,169,143,.14);
+    --line:rgba(212,168,74,.16);
+    --shadow:0 14px 44px rgba(0,0,0,.55);--glow:0 0 30px rgba(212,168,74,.20);
+    --radius:16px;--sidew:236px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Alibaba PuHuiTi 2.0","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.92;font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(900px 500px at 88% -10%, rgba(212,168,74,.10) 0%, transparent 60%),
+      radial-gradient(700px 480px at 5% 12%, rgba(122,169,143,.06) 0%, transparent 55%);
+  }
+  ::selection{background:var(--gold);color:#0a0a0f}
+
+  /* Sidebar */
+  .sidebar{position:fixed;top:0;left:0;width:var(--sidew);height:100vh;background:linear-gradient(180deg,#0d0d16,#0a0a0f);border-right:1px solid var(--gold-line);z-index:50;overflow-y:auto;box-shadow:6px 0 30px rgba(0,0,0,.5)}
+  .side-inner{padding:28px 18px 40px}
+  .side-brand{text-align:center;margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid var(--gold-line)}
+  .side-brand .cn{font-size:18px;font-weight:700;letter-spacing:.16em;color:var(--gold-bright);text-shadow:0 2px 14px rgba(212,168,74,.28)}
+  .side-brand .en{font-size:9px;letter-spacing:.26em;color:var(--ink-dim);margin-top:6px;text-transform:uppercase}
+  .side-nav{display:flex;flex-direction:column;gap:2px}
+  .side-nav a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;color:var(--ink-soft);text-decoration:none;font-size:14px;transition:all .25s ease;border:1px solid transparent}
+  .side-nav a .n{font-family:Georgia,serif;color:var(--gold);font-size:13px;width:20px}
+  .side-nav a:hover{background:var(--gold-soft);color:var(--ink)}
+  .side-nav a.active{background:linear-gradient(90deg,var(--gold-soft),transparent);border-color:var(--gold-line);color:var(--gold-bright);box-shadow:inset 3px 0 0 var(--gold)}
+  .side-foot{margin-top:30px;padding-top:22px;border-top:1px solid var(--gold-line);font-size:11px;color:var(--ink-dim);line-height:1.7}
+  .side-foot b{color:var(--gold)}
+  .back-home{display:block;margin-top:16px;text-align:center;font-size:12.5px;color:var(--gold-bright);text-decoration:none;border:1px solid var(--gold-line);border-radius:999px;padding:7px 10px;transition:all .25s ease}
+  .back-home:hover{background:var(--gold);color:#0a0a0f}
+
+  main{margin-left:var(--sidew);min-height:100vh}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;background:radial-gradient(900px 420px at 50% 0%, rgba(212,168,74,.16) 0%, transparent 60%),linear-gradient(180deg,#0d0d14,var(--bg));border-bottom:1px solid var(--gold-line);padding:60px 32px 52px;text-align:center}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.7%,rgba(212,168,74,.06) 49.8%,rgba(212,168,74,.06) 50.2%,transparent 50.3%),linear-gradient(0deg,transparent 49.7%,rgba(212,168,74,.06) 49.8%,rgba(212,168,74,.06) 50.2%,transparent 50.3%);background-size:60px 60px;opacity:.35;pointer-events:none}
+  .hero-inner{position:relative;max-width:880px;margin:0 auto}
+  .hero-brand-cn{font-size:clamp(20px,2.6vw,26px);font-weight:700;letter-spacing:.18em;background:linear-gradient(90deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:26px}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--gold-line);color:var(--gold-bright);font-size:12px;letter-spacing:.2em;padding:6px 18px;border-radius:999px}
+  .badge svg{width:13px;height:13px;fill:var(--gold)}
+  h1{font-size:clamp(27px,4vw,42px);font-weight:700;line-height:1.3;margin:22px auto 8px;max-width:800px;background:linear-gradient(90deg,var(--gold-bright) 0%,var(--gold) 60%,var(--red) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  h1 .hl{position:relative;white-space:nowrap;display:inline-block;background:linear-gradient(135deg,var(--gold-bright),var(--gold));color:#14100a;padding:.04em .24em .08em;border-radius:12px;box-shadow:0 8px 26px rgba(212,168,74,.5),inset 0 1px 0 rgba(255,255,255,.45);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hero .sub{font-size:clamp(14.5px,1.8vw,16.5px);color:var(--ink-soft);max-width:720px;margin:18px auto 0;line-height:1.9}
+  .hero .sub b{color:var(--gold-bright)}
+
+  /* Article */
+  article{max-width:920px;margin:0 auto;padding:52px 32px 20px}
+  section{margin-bottom:56px;opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+  section.in{opacity:1;transform:translateY(0)}
+  .sec-tag{display:inline-block;font-size:11px;letter-spacing:.26em;color:var(--gold);border:1px solid var(--gold-line);background:var(--gold-soft);padding:4px 14px;border-radius:999px;margin-bottom:16px}
+  h2{font-size:clamp(21px,2.8vw,27px);font-weight:700;line-height:1.4;margin-bottom:18px;color:var(--ink)}
+  h2 .num{color:var(--gold);font-family:Georgia,serif;font-weight:700;margin-right:12px}
+  h3{font-size:16.5px;font-weight:700;margin:22px 0 10px;color:var(--gold-bright)}
+  p{margin-bottom:14px;color:#d9cdb4}
+  p strong{color:var(--ink)}
+  .lead{font-size:16.5px;line-height:1.95;color:#ebe1c8;border-left:3px solid var(--gold);background:var(--card);padding:20px 24px;border-radius:0 14px 14px 0;margin-bottom:26px;box-shadow:var(--shadow)}
+  .lead strong{color:var(--gold-bright)}
+  .quote{background:var(--green-soft);border-left:3px solid var(--green);border-radius:0 12px 12px 0;padding:14px 20px;margin:16px 0;font-size:14.5px;color:#b8cdbf}
+  .quote .src{display:block;margin-top:6px;font-size:12px;color:var(--green)}
+  .data-row{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}
+  .data-card{flex:1 1 190px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1px solid var(--gold-line);border-radius:14px;padding:16px;text-align:center;box-shadow:var(--shadow)}
+  .data-card .n{font-size:23px;font-weight:700;color:var(--gold-bright);font-family:Georgia,serif}
+  .data-card .t{font-size:12.5px;color:var(--ink-soft);margin-top:5px}
+
+  /* History table */
+  .history-table{width:100%;border-collapse:separate;border-spacing:0;margin:20px 0;font-size:13.5px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1px solid var(--gold-line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+  .history-table th{background:linear-gradient(135deg,var(--gold-soft),transparent);color:var(--gold-bright);font-weight:700;padding:12px 14px;text-align:left;border-bottom:1px solid var(--gold-line);letter-spacing:.04em}
+  .history-table td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top}
+  .history-table tr:last-child td{border-bottom:none}
+  .history-table .year{color:var(--gold);font-family:Georgia,serif;white-space:nowrap}
+  .history-table .layer{color:var(--gold-bright);white-space:nowrap}
+  .history-table tr:hover td{background:rgba(212,168,74,.05)}
+
+  /* Case cards */
+  .case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}
+  .case{background:linear-gradient(180deg,var(--card-2),var(--card));border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow);transition:transform .25s ease,border-color .25s ease}
+  .case:hover{transform:translateY(-3px);border-color:var(--gold-line)}
+  .case .tag{display:inline-block;font-size:11px;letter-spacing:.14em;padding:3px 11px;border-radius:999px;margin-bottom:10px}
+  .case.book .tag{background:var(--gold-soft);color:var(--gold-bright);border:1px solid var(--gold-line)}
+  .case.real .tag{background:var(--green-soft);color:var(--green);border:1px solid rgba(122,169,143,.3)}
+  .case .tt{font-weight:700;font-size:14.5px;color:var(--ink);margin-bottom:6px}
+  .case p{font-size:13px;color:var(--ink-soft);line-height:1.8;margin:0}
+  .case p b{color:var(--gold-bright)}
+
+  /* Cycle */
+  .cycle{display:flex;flex-direction:column;gap:8px;margin:18px 0}
+  .cycle-row{display:flex;align-items:center;gap:10px;background:linear-gradient(90deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:12px;padding:10px 16px;font-size:13.5px;color:var(--ink-soft)}
+  .cycle-row .step{flex:0 0 30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--gold-bright),var(--gold));color:#0a0a0f;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:Georgia,serif;font-size:14px;box-shadow:0 4px 12px rgba(212,168,74,.3)}
+  .cycle-row .arrow{margin-left:auto;color:var(--gold);font-size:15px}
+  .cycle.good .cycle-row{border-color:var(--gold-line)}
+  .cycle.bad .cycle-row{border-color:rgba(212,100,90,.3)}
+  .cycle.bad .step{background:linear-gradient(135deg,#e08c82,var(--red));box-shadow:0 4px 12px rgba(212,100,90,.3)}
+  .cycle.bad .arrow{color:var(--red)}
+
+  .insight{margin:24px 0;background:linear-gradient(120deg,var(--card-2),rgba(212,168,74,.06));border:1px solid var(--gold-line);border-radius:14px;padding:20px 24px;box-shadow:var(--shadow)}
+  .insight .row{display:flex;gap:12px;align-items:flex-start;margin-top:10px;font-size:14px;color:#d9cdb4}
+  .insight .row b{color:var(--gold-bright);white-space:nowrap}
+  .insight .row:first-child{margin-top:0}
+
+  /* FAQ */
+  .faq-item{background:linear-gradient(180deg,var(--card-2),var(--card));border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+  .faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;font-family:inherit;font-size:14.5px;font-weight:700;color:var(--ink);padding:17px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .faq-q .plus{color:var(--gold);font-size:20px;font-weight:300;transition:transform .35s ease;width:28px;height:28px;border-radius:50%;border:1px solid var(--gold-line);display:flex;align-items:center;justify-content:center}
+  .faq-item.open .plus{transform:rotate(135deg);background:var(--gold);color:#0a0a0f}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .faq-a .inner{padding:0 22px 17px;font-size:13.5px;color:var(--ink-soft);line-height:1.85}
+
+  /* Conclusion */
+  .conclusion{text-align:center;background:linear-gradient(160deg,rgba(212,168,74,.10),rgba(212,168,74,.02));border:1px solid var(--gold-line);border-radius:var(--radius);padding:42px 30px;margin:24px 0;position:relative;overflow:hidden}
+  .conclusion::before,.conclusion::after{content:"";position:absolute;left:50%;transform:translateX(-50%);width:60%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+  .conclusion::before{top:14px}
+  .conclusion::after{bottom:14px}
+  .conclusion .slogan{font-size:clamp(19px,2.8vw,23px);font-weight:700;background:linear-gradient(90deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:14px}
+  .conclusion p{color:var(--ink-soft);max-width:680px;margin:0 auto;line-height:1.95}
+
+  footer{border-top:1px solid var(--gold-line);background:linear-gradient(180deg,var(--bg),#08080c);padding:34px 32px;text-align:center;color:var(--ink-dim);font-size:12.5px;line-height:1.85}
+  footer .proj{font-weight:700;color:var(--gold-bright);margin-bottom:6px;font-size:13.5px}
+  footer a{color:var(--gold-bright);text-decoration:none;border-bottom:1px dotted var(--gold)}
+
+  @media (max-width:1024px){.sidebar{display:none}main{margin-left:0}}
+  @media (max-width:760px){
+    .case-grid{grid-template-columns:1fr}
+    .hero{padding:44px 18px 38px}
+    article{padding:38px 18px 12px}
+    .history-table{font-size:12px}
+  }
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="side-inner">
+    <div class="side-brand">
+      <div class="cn">财情双生智库</div>
+      <div class="en">Econ-Sentiment Twin Think Tank</div>
+    </div>
+    <nav class="side-nav" id="sideNav">
+      <a href="#answer" data-target="answer"><span class="n">壹</span>核心答案</a>
+      <a href="#history" data-target="history"><span class="n">贰</span>心理学史·七层对照</a>
+      <a href="#micro" data-target="micro"><span class="n">叁</span>微观公式·个人价值</a>
+      <a href="#macro" data-target="macro"><span class="n">肆</span>宏观公式·共赢之路</a>
+      <a href="#cycle" data-target="cycle"><span class="n">伍</span>良性循环·自我调节</a>
+      <a href="#faq" data-target="faq"><span class="n">陆</span>常见问题</a>
+      <a href="#end" data-target="end"><span class="n">柒</span>结语</a>
+    </nav>
+    <div class="side-foot">
+      价值守恒定律<br/>
+      <b>Y = E × S × T</b><br/>
+      <span style="color:var(--ink-dim)">y = m × h × t</span>
+    </div>
+    <a class="back-home" href="index.html">← 返回主站</a>
+  </div>
+</aside>
+
+<main>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-brand-cn">财情双生智库 · 深度论证</div>
+    <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.2L21 9l-5 4.5 1.6 6.5L12 16.6 6.4 20 8 13.5 3 9l6.6-.8z"/></svg>7层深度方法论 · 心理学整合</span>
+    <h1>7层深度模型：心理学史的<span class="hl">收敛解</span></h1>
+    <p class="sub">把百年各流派放回七层阶梯，用价值守恒定律论证——<b>挣钱·省钱·值钱</b>如何触发良性循环，实现个人、企业、国家的共赢与高质量发展。</p>
+  </div>
+</header>
+
+<article>
+
+  <!-- 壹 核心答案 -->
+  <section id="answer">
+    <span class="sec-tag">CORE ANSWER · 答案优先</span>
+    <h2><span class="num">壹</span>核心答案：七层不是新流派，而是"总目录"</h2>
+    <p class="lead">
+      <strong>7层深度模型（信息→物质→行为→躯体→觉知→潜意识→心智）不是新的心理学流派，而是心理学一百多年发展的"层状收敛"。</strong>
+      行为主义研究行为层，精神分析深耕潜意识层，人本主义仰望心智层，认知疗法贯通信息与行为……
+      各家都在七层阶梯的某一层上钻出了深度，而 7 层模型把它们串成一条通往本质的路径。
+      当个人、企业与国家沿此阶梯下钻，并以价值守恒定律校准决策——
+      <strong>微观 y = m×h×t，宏观 Y = E×S×T</strong>——
+      乘法生效、除法退场，自我调节的良性循环被触发，共赢与高质量发展水到渠成。
+    </p>
+    <div class="data-row">
+      <div class="data-card"><div class="n">1879</div><div class="t">冯特莱比锡实验室·现代心理学开端</div></div>
+      <div class="data-card"><div class="n">100+</div><div class="t">百年发展·七大流派纷呈</div></div>
+      <div class="data-card"><div class="n">3亿</div><div class="t">世界卫生组织估算·受抑郁困扰人口</div></div>
+    </div>
+  </section>
+
+  <!-- 贰 心理学史 -->
+  <section id="history">
+    <span class="sec-tag">HISTORY · 心理学发展史</span>
+    <h2><span class="num">贰</span>心理学史的"主义之争"，本质是层次之争</h2>
+    <p>
+      心理学史上的每一次革命，都把探照灯打向七层中的某一层。它们的成果并不冲突，而是互补——
+      7 层深度模型正是这份百年探索的"总目录"：
+    </p>
+    <table class="history-table">
+      <tr><th>年代</th><th>流派 / 人物</th><th>深耕的层次</th><th>贡献</th></tr>
+      <tr><td class="year">1879</td><td>冯特·构造主义</td><td class="layer">信息层</td><td>把"心理"变成可实验的对象</td></tr>
+      <tr><td class="year">1913</td><td>华生·斯金纳·行为主义</td><td class="layer">行为层</td><td>强化与条件反射塑造习惯</td></tr>
+      <tr><td class="year">1900</td><td>弗洛伊德·精神分析</td><td class="layer">潜意识层</td><td>冰山隐喻：行为由水下动机驱动</td></tr>
+      <tr><td class="year">1950s</td><td>马斯洛·罗杰斯·人本主义</td><td class="layer">心智层·觉知层</td><td>自我实现与无条件积极关注</td></tr>
+      <tr><td class="year">1960s</td><td>贝克·认知疗法 CBT</td><td class="layer">信息层→行为层</td><td>认知—情绪—行为三角矫正</td></tr>
+      <tr><td class="year">1990s</td><td>达马西奥·神经科学</td><td class="layer">躯体层</td><td>《笛卡尔的错误》：身体承载情绪</td></tr>
+      <tr><td class="year">2000</td><td>塞利格曼·积极心理学</td><td class="layer">觉知层·时间价值</td><td>幸福与福流，不只是消病</td></tr>
+    </table>
+    <div class="quote">
+      弗洛伊德把人心比作冰山：水面之上是意识，水下是潜意识——正是 7 层模型"冰山图"的原型。
+      主义之争，不过是各派站在不同层次对话；7 层模型给它们一张同框的坐标系。
+      <span class="src">—— 对照自《心理学史》与弗洛伊德《梦的解析》</span>
+    </div>
+  </section>
+
+  <!-- 叁 微观 -->
+  <section id="micro">
+    <span class="sec-tag">MICRO · 微观公式</span>
+    <h2><span class="num">叁</span>微观论证：y = m × h × t，为什么"值钱"能倍增</h2>
+    <p>
+      对个人，价值总量 = 货币价值 × 幸福体验 × 时间价值。三个维度任一归零，总账就归零；
+      三维同时大于 1，人生进入复利通道。
+    </p>
+    <div class="case-grid">
+      <div class="case book">
+        <span class="tag">书籍案例</span>
+        <div class="tt">《活出生命的意义》· 弗兰克尔</div>
+        <p>集中营里，能找到"为什么活"的人（<b>心智层</b>）更可能活下来——意义让幸福体验与时间价值不归零，这正是 h×t 的乘法。</p>
+      </div>
+      <div class="case real">
+        <span class="tag">现实案例</span>
+        <div class="tt">高薪 996 却越来越疲惫</div>
+        <p>货币价值 m 在涨，幸福体验 h 与时间价值 t 却在跌，总账反而变小——<b>除法陷阱</b>：透支躯体（躯体层）换来的钱，买不回幸福。</p>
+      </div>
+      <div class="case real">
+        <span class="tag">现实案例</span>
+        <div class="tt">亲子沟通的错位</div>
+        <p>父母只在信息层讲道理，孩子要的是觉知层的"被看见"。沟通卡在表层，问题必然沉入潜意识，变成下一次冲突。</p>
+      </div>
+      <div class="case book">
+        <span class="tag">书籍案例</span>
+        <div class="tt">《原子习惯》· 克利尔</div>
+        <p>每天 1% 的改进（<b>行为层</b>），一年后约是 37 倍——习惯是时间价值的复利引擎，省钱省下的每一分，都是可再配置的生命资源。</p>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="row"><b>挣钱</b>= 信息层技能 + 行为层行动：效率与交换的艺术。</div>
+      <div class="row"><b>省钱</b>= 物质层节制 + 行为层习惯：对时间价值的尊重。</div>
+      <div class="row"><b>值钱</b>= 潜意识层信念 + 心智层意义：信用、能力、关系，一次交易清零不了。</div>
+      <div class="row"><b>顿悟：</b>挣钱是加法，省钱是减法，值钱是乘法——只有站上乘法一侧，总账才倍增。</div>
+    </div>
+  </section>
+
+  <!-- 肆 宏观 -->
+  <section id="macro">
+    <span class="sec-tag">MACRO · 宏观公式</span>
+    <h2><span class="num">肆</span>宏观论证：Y = E × S × T，共赢与高质量发展</h2>
+    <p>
+      对国家与企业，经济社会价值总量 = 经济价值 × 社会价值 × 时间价值。微观的良性循环层层放大，
+      汇聚成宏观的共赢——这是高质量发展的乘法底座。
+    </p>
+    <div class="case-grid">
+      <div class="case book">
+        <span class="tag">书籍案例</span>
+        <div class="tt">《活法》· 稻盛和夫</div>
+        <p>"作为人，何谓正确"的利他经营：先让员工幸福（<b>S</b>）、坚持长期主义（<b>T</b>），经济价值（<b>E</b>）反而持续放大——京瓷与 KDDI 的实践证明，乘法公式让企业基业长青。</p>
+      </div>
+      <div class="case real">
+        <span class="tag">现实案例</span>
+        <div class="tt">内卷企业的"假繁荣"</div>
+        <p>只比加班时长换短期业绩（<b>E</b>），牺牲员工幸福感（<b>S</b>）与健康（<b>T</b>）——除法公式的局部之优，换来的是人才流失与品牌透支。</p>
+      </div>
+      <div class="case real">
+        <span class="tag">现实案例</span>
+        <div class="tt">反内卷与共同富裕</div>
+        <p>国家层面的治理，本质是给 S 与 T 装上"仪表盘"：教育减负、医疗改革、劳动保护，都是在防止 E 单边狂奔，校准三维价值。</p>
+      </div>
+      <div class="case real">
+        <span class="tag">现实案例</span>
+        <div class="tt">新质生产力</div>
+        <p>以效率（E）、社会价值（S）、可持续（T）三维并进的生产方式——绿色、创新、长期，正是宏观乘法公式的政策表达。</p>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="row"><b>上下贯通：</b>无数个 y 的良性循环，构成 Y 的良性循环（y₁+y₂+…+yₙ）。个人幸福 → 家庭和睦 → 企业活力 → 国家繁荣，一条链上的乘法。</div>
+      <div class="row"><b>共赢公式：</b>让员工挣得开心、让用户买得温暖、让社会获得增量——三者同向，价值总量才倍增。</div>
+    </div>
+  </section>
+
+  <!-- 伍 良性循环 -->
+  <section id="cycle">
+    <span class="sec-tag">MECHANISM · 自我调节机制</span>
+    <h2><span class="num">伍</span>良性循环：7层下钻，就是自我调节的"检修流程"</h2>
+    <p>
+      恶性循环走除法，良性循环走乘法。7 层深度模型的价值，在于给自我调节一张可操作的下钻地图：
+    </p>
+    <div class="cycle bad">
+      <div class="cycle-row"><span class="step">1</span>焦虑（信息层）<span class="arrow">→</span></div>
+      <div class="cycle-row"><span class="step">2</span>逃避刷手机（行为层）<span class="arrow">→</span></div>
+      <div class="cycle-row"><span class="step">3</span>内疚自责（觉知层）<span class="arrow">→</span></div>
+      <div class="cycle-row"><span class="step">4</span>“我不行”（潜意识层）<span class="arrow">→</span></div>
+      <div class="cycle-row"><span class="step">5</span>更焦虑……恶性循环</div>
+    </div>
+    <div class="cycle good">
+      <div class="cycle-row"><span class="step">1</span>觉察情绪（觉知层）<span class="arrow">→</span></div>
+      <div class="cycle-row"><span class="step">2</span>下钻找源头（潜意识层：恐惧或剧本）<span class="arrow">→</span></div>
+      <div class="cycle-row"><span class="step">3</span>重构信念（心智层：意义与价值）<span class="arrow">→</span></div>
+      <div class="cycle-row"><span class="step">4</span>行为改变（行为层）<span class="arrow">→</span></div>
+      <div class="cycle-row"><span class="step">5</span>身体轻松（躯体层）→ 幸福↑（h）→ 时间复利（t）→ 能力更强（m）→ 总账倍增</div>
+    </div>
+    <div class="quote">
+      《蛤蟆先生去看心理医生》讲的就是这条路径：蛤蟆的抑郁源于童年"剧本"（潜意识层），
+      在咨询中被看见（觉知层）、被改写（心智层），行为与身体随之放松——自我调节不是硬扛，而是七层下钻。
+      <span class="src">—— 认知行为疗法的通俗版：认知—情绪—行为三角，正是 7 层模型的行为切片</span>
+    </div>
+    <div class="insight">
+      <div class="row"><b>个人版飞轮：</b>价值被确认 → 幸福高效 → 更多创造 → 更值钱 → 再确认。</div>
+      <div class="row"><b>企业版飞轮：</b>员工内驱 → 创新 → 业绩 → 分享价值 → 内驱更强。</div>
+      <div class="row"><b>国家版飞轮：</b>民生改善 → 信心回升 → 内需扩大 → 高质量发展 → 民生更好。</div>
+    </div>
+  </section>
+
+  <!-- 陆 FAQ -->
+  <section id="faq">
+    <span class="sec-tag">FAQ · 常见问题</span>
+    <h2><span class="num">陆</span>常见问题</h2>
+    <div class="faq-item">
+      <button class="faq-q">Q1：7层模型与现有心理学流派冲突吗？<span class="plus">+</span></button>
+      <div class="faq-a"><div class="inner">不冲突，而是整合。每个流派都在七层中的某一层深耕，7 层模型提供同框坐标系：行为问题看行为层，情绪问题看觉知层，模式问题看潜意识层，意义问题看心智层——各归其位，各得其所。</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Q2：普通人怎么开始用？<span class="plus">+</span></button>
+      <div class="faq-a"><div class="inner">两步：先记账（物质层），再记情绪（觉知层）。遇困扰自问"我在第几层"，下钻一层再行动。</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Q3：企业如何落地这套模型？<span class="plus">+</span></button>
+      <div class="faq-a"><div class="inner">三个层面：战略上校准 E/S/T；激励上让员工"挣得开心、干得有尊严"（h 与 t）；产品上让用户"买得温暖"（S）。三者同向，就是稻盛和夫式利他经营的现代版。</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Q4：这和国家高质量发展是什么关系？<span class="plus">+</span></button>
+      <div class="faq-a"><div class="inner">高质量发展要求经济、社会、时间三维同时大于 1：既要有效率（E），也要有温度（S），还要可持续（T）。7 层模型给出微观抓手——每个劳动者幸福高效，宏观自然繁荣。</div></div>
+    </div>
+  </section>
+
+  <!-- 结语 -->
+  <section id="end">
+    <div class="conclusion">
+      <div class="slogan">从"主义之争"到"层次之和"</div>
+      <p>
+        心理学百年，给出了一块块拼图；价值守恒定律，给出了拼图的公式；
+        7 层深度模型，给出了拼图的坐标系。沿七层下钻，乘法生效、自我调节启动——
+        个人幸福、企业长青、国家富强，都在这一条良性循环里。
+      </p>
+    </div>
+  </section>
+
+</article>
+
+<footer>
+  <div class="proj">财情双生智库 · 7层深度模型论证（开源项目）</div>
+  <div>价值守恒定律：宏观 Y = E × S × T ｜ 微观 y = m × h × t</div>
+  <div style="margin-top:10px">遵循《中华人民共和国广告法》编写，不含极限用语与虚假承诺 · 可作为 GEO/SEO 内容开源传播</div>
+  <div style="margin-top:10px;opacity:.7">© 2026 财情双生智库 · 让爱可得，让财有温度，让情有价值 · <a href="index.html">返回主站</a></div>
+</footer>
+
+</main>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click',function(){
+      var item=q.parentElement, ans=item.querySelector('.faq-a'), isOpen=item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight='0px';});
+      if(!isOpen){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+    });
+  });
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('section').forEach(function(s){io.observe(s)});
+  var navLinks=document.querySelectorAll('.side-nav a');
+  var navIo=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('data-target')===e.target.id);});}});},{rootMargin:'-40% 0px -55% 0px'});
+  document.querySelectorAll('section[id]').forEach(function(s){navIo.observe(s)});
+</script>
+</body>
+</html>
