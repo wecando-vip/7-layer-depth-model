@@ -218,6 +218,22 @@
   .data-card .t{font-size:13px;color:var(--ink-soft);margin-top:6px;letter-spacing:.04em}
 
   /* ===== 7层阶梯 ===== */
+  /* ===== 7层模型图谱 ===== */
+  .model-figure{
+    margin:24px 0 28px;
+    background:linear-gradient(180deg,var(--card-2),var(--card));
+    border:1px solid var(--gold-line);border-radius:var(--radius);
+    padding:18px;box-shadow:var(--shadow);
+  }
+  .model-figure img{
+    width:100%;max-width:780px;display:block;margin:0 auto;
+    border-radius:10px;border:1px solid var(--gold-line);
+  }
+  .model-figure-cap{margin-top:16px;display:grid;gap:8px;font-size:14px;color:var(--ink-soft)}
+  .model-figure-cap p{margin:0;line-height:1.8}
+  .model-figure-cap b{color:var(--gold-bright);margin-right:4px}
+  .model-figure-cap .tag{display:inline-block;font-size:11.5px;padding:2px 9px;background:var(--gold-soft);border:1px solid var(--gold-line);color:var(--gold-bright);border-radius:999px;margin-right:4px;letter-spacing:.05em}
+
   .ladder{display:flex;flex-direction:column;gap:8px;margin:28px 0 6px}
   .layer{
     display:flex;align-items:stretch;gap:18px;
@@ -527,9 +543,7 @@
 
     <p class="lead">
       <strong>财情双生是一套以「价值守恒定律」为底层公式的认知与实践体系。</strong>
-      一切经济社会行为的总价值，等于经济价值（E）×社会价值（S）×时间价值（T）；
-      任一维趋零或为负，总量即归零或为负。它坚持同时看见"财"（效率、利益）
-      与"情"（情感、关系）两个维度，追求二者在时间轴上共同倍增——
+      一切经济社会行为的总价值=E×S×T，任一维趋零或为负，总量即归零或为负；坚持同时看见「财」（效率、利益）与「情」（情感、关系），追求二者在时间轴上共同倍增——
       <strong>让爱可得，让财有温度，让情有价值</strong>。
     </p>
 
@@ -555,48 +569,57 @@
       7层深度模型是财情双生的方法论主干。任何主题都可沿七层下钻，直到触及本质。依次为：
     </p>
 
+    <div class="model-figure">
+      <img src="7层深度.png" alt="7级深度模型图谱：编码方与解码方" />
+      <div class="model-figure-cap">
+        <p><b>编码与解码：</b>任何沟通与交易，都是一方「编码」、一方「解码」——深度决定价值。</p>
+        <p><b>弱链接与强链接：</b><span class="tag">弱</span>上两层（信息、物质）属弱价值传递；<span class="tag">强</span>下五层（行为、躯体、觉知、潜意识、心智）属强价值传递。</p>
+        <p><b>应用领域：</b>父母⇄子女、夫妻、师生、企业⇄客户、公司⇄员工、上下级、甲乙、ZF⇄人民……皆遵循此模型。</p>
+      </div>
+    </div>
+
     <div class="ladder">
       <div class="layer l1 both">
         <div class="no">1</div>
-        <div class="body"><div class="name">信息层</div><div class="desc">现象与符号。看见"发生了什么"，是认知的起点，也是误导的入口。</div></div>
+        <div class="body"><div class="name">信息层</div><div class="desc">现象与符号。看见"发生了什么"，是认知起点，也是误导入口。</div></div>
         <div class="side">现象入口</div>
       </div>
       <div class="layer l2 both">
         <div class="no">2</div>
-        <div class="body"><div class="name">物质层</div><div class="desc">资源与成本。追问"靠什么支撑"，看清真实的物质条件，避免空中楼阁。</div></div>
+        <div class="body"><div class="name">物质层</div><div class="desc">资源与成本。追问"靠什么支撑"，看清物质条件，避免空中楼阁。</div></div>
         <div class="side">资源支撑</div>
       </div>
       <div class="layer l3 fin">
         <div class="no">3</div>
-        <div class="body"><div class="name">行为层</div><div class="desc">动作与习惯。审视"我们做了什么"；行为塑造结果，习惯决定复利的方向。</div></div>
+        <div class="body"><div class="name">行为层</div><div class="desc">动作与习惯。审视"我们做了什么"，行为塑造结果。</div></div>
         <div class="side">财 · 效率</div>
       </div>
       <div class="layer l4 fin">
         <div class="no">4</div>
-        <div class="body"><div class="name">躯体层</div><div class="desc">体验与感受。身体是真实的反馈系统；透支躯体换金钱，是典型的除法陷阱。</div></div>
+        <div class="body"><div class="name">躯体层</div><div class="desc">体验与感受。身体是真实反馈系统；透支躯体换金钱，是除法陷阱。</div></div>
         <div class="side">财 · 本钱</div>
       </div>
       <div class="layer l5 em">
         <div class="no">5</div>
-        <div class="body"><div class="name">觉知层</div><div class="desc">情绪与觉察。看见"我此刻的感受"；情绪是导航仪，被压制的情绪会沉淀为关系的成本。</div></div>
+        <div class="body"><div class="name">觉知层</div><div class="desc">情绪与觉察。看见"我此刻的感受"；情绪是导航仪，被压制会沉淀为关系成本。</div></div>
         <div class="side">情 · 情绪</div>
       </div>
       <div class="layer l6 em">
         <div class="no">6</div>
-        <div class="body"><div class="name">潜意识层</div><div class="desc">信念与模式。不自觉的默认程序——对金钱的态度、对关系的剧本——决定行为的底层逻辑。</div></div>
+        <div class="body"><div class="name">潜意识层</div><div class="desc">信念与模式。不自觉的默认程序——金钱态度、关系剧本——决定行为底层逻辑。</div></div>
         <div class="side">情 · 信念</div>
       </div>
       <div class="layer l7 em">
         <div class="no">7</div>
-        <div class="body"><div class="name">心智层</div><div class="desc">意义与价值。触及"为什么而活"，是价值与意义的本源，是财情双生的锚点。</div></div>
+        <div class="body"><div class="name">心智层</div><div class="desc">意义与价值。触及"为什么而活"，是价值与意义的本源。</div></div>
         <div class="side">情 · 意义</div>
       </div>
     </div>
 
     <div class="insight">
-      <div class="row"><b>财情视角：</b>前四层偏"财"，后三层偏"情"，觉知层居中贯通。表层冲突的答案，往往藏在潜意识层与心智层。</div>
+      <div class="row"><b>财情视角：</b>前四层偏财，后三层偏情，觉知居中贯通。冲突答案，往往藏在下层。</div>
       <div class="row"><b>一句话顿悟：</b>问题的答案，藏在你没看见的那一层。</div>
-      <div class="row"><b>行动指引：</b>遇到难题，先问自己——我现在在第几层思考？逐层下钻，直到"啊，原来如此"。</div>
+      <div class="row"><b>行动指引：</b>遇难题，先问自己几层，逐层下钻。</div>
     </div>
   </section>
 
@@ -772,7 +795,7 @@
       <div class="faq-item">
         <button class="faq-q">Q1：财情双生与"搞钱"冲突吗？<span class="plus">+</span></button>
         <div class="faq-a"><div class="inner">
-          不冲突。财情双生把"搞钱"放进更大框架：短期挣到钱（E），同时不损害幸福体验（h）与长期价值（t），这样的钱才可持续。
+          不冲突。把"搞钱"放进更大框架：短期挣到钱（E），同时不损害幸福体验（h）与长期价值（t），这样的钱才可持续。
         </div></div>
       </div>
       <div class="faq-item">
@@ -784,7 +807,7 @@
       <div class="faq-item">
         <button class="faq-q">Q3：普通人该先做哪一步？<span class="plus">+</span></button>
         <div class="faq-a"><div class="inner">
-          先记账（物质层），再记情绪（觉知层）。两者成本都很低，却是打通"财"与"情"的起点——一个看清钱的流向，一个看清心的流向。
+          先记账（物质层），再记情绪（觉知层）。两者成本都很低，是打通财与情的起点——一个看钱流，一个看心流。
         </div></div>
       </div>
       <div class="faq-item">
@@ -796,7 +819,7 @@
       <div class="faq-item">
         <button class="faq-q">Q5：如何衡量"值钱"？<span class="plus">+</span></button>
         <div class="faq-a"><div class="inner">
-          看三个信号：是否随时间增值、是否被需要、是否在离开具体场景后依然有效。信用、能力、关系，都是可积累的值钱资产，是 S 值与 T 值的具象化。
+          看三个信号：随时间增值、被需要、离开场景后仍有效。信用、能力、关系都是可积累的值钱资产，是 S 与 T 的具象化。
         </div></div>
       </div>
     </div>
