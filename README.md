@@ -1,4 +1,4 @@
-{"name":"README.md","path":"README.md","sha":"eba25c8108d22020e6f59156551a423de4521985","size":5110,"url":"https://api.github.com/repos/wecando-vip/7-layer-depth-model/contents/README.md?ref=main","html_url":"https://github.com/wecando-vip/7-layer-depth-model/blob/main/README.md","git_url":"https://api.github.com/repos/wecando-vip/7-layer-depth-model/git/blobs/eba25c8108d22020e6f59156551a423de4521985","download_url":"https://raw.githubusercontent.com/wecando-vip/7-layer-depth-model/main/README.md","type":"file","content":"IyDotKLmg4Xlj4znlJ8gwrcgN+Wxgua3seW6puaooeWei++8iEVjb24tU2Vu\ndGltZW50IFR3aW4gwrcgNy1MYXllciBEZWVwIE1vZGVs77yJCgo+IOiuqSLn\niLEi5Y+v5b6X77yM6K6p6LSi5pyJ5rip5bqm77yM6K6p5oOF5pyJ5Lu35YC8\n44CCCgrotKLmg4Xlj4znlJ/mmK/kuIDlpZfku6UqKuS7t+WAvOWuiOaBkuWu\nmuW+iyoq5Li65bqV5bGC5YWs5byP55qE6K6k55+l5LiO5a6e6Le15L2T57O7\n77yM5YW25pa55rOV6K665qC45b+D5pivICoqN+Wxgua3seW6puaooeWeiyoq\n4oCU4oCU5Lu75L2V5Li76aKY5rK/44CM5L+h5oGv5bGCIOKGkiDnianotKjl\nsYIg4oaSIOihjOS4uuWxgiDihpIg6Lqv5L2T5bGCIOKGkiDop4nnn6XlsYIg\n4oaSIOa9nOaEj+ivhuWxgiDihpIg5b+D5pm65bGC44CN6YCQ57qn5LiL6ZK7\n77yM55u05Yiw6Kem5Y+K5pys6LSo77yI5Lq65oCn55qE5Z+65pys57uT5p6E\n44CB5Lu35YC85LiO5oSP5LmJ55qE5pys5rqQ77yJ77yM5ZCM5pe255yL6KeB\n44CM6LSi44CN77yI5Lu35YC844CB6LSi5a+M44CB5pWI546H44CB5Yip55uK\n77yJ5LiO44CM5oOF44CN77yI5oOF5oSf44CB5YWz57O744CB5YWx6bij44CB\n5Lq65oCn77yJ5Lik5Liq57u05bqm77yM6L+95rGC5Lik6ICF5Zyo5pe26Ze0\n57u05bqm5LiK5YWx5ZCM5YCN5aKe44CCCgojIyDmoLjlv4PvvJo35bGC5rex\n5bqm5qih5Z6LCgpgYGAK5L+h5oGv5bGCIOKGkiDnianotKjlsYIg4oaSIOih\njOS4uuWxgiDihpIg6Lqv5L2T5bGCIOKGkiDop4nnn6XlsYIg4oaSIOa9nOaE\nj+ivhuWxgiDihpIg5b+D5pm65bGCCmBgYAoKLSDliY3lm5vlsYLlgY8i6LSi\nIu+8iOaViOeOh+OAgeaIkOacrOOAgeihjOS4uu+8ie+8jOWQjuS4ieWxguWB\njyLmg4Ui77yI5oSf5Y+X44CB5L+h5b+144CB5oSP5LmJ77yJ77yM5Lit6Ze0\n55Sx6KeJ55+l5bGC6LSv6YCaCi0g6KGo5bGC5Yay56qB77yI5L+h5oGv5bGC\n77yJ55qE562U5qGI77yM5b6A5b6A6JeP5Zyo5r2c5oSP6K+G5bGC5LiO5b+D\n5pm65bGCCi0g6aaW5bGP6aaW6aG15Y2z5bGV56S65LiD5bGC6K6k55+l6Zi2\n5qKv77yM5YWo56+H5LulIDcg5bGC5qih5Z6L5Li65Li757q/6LSv56m/Cgoj\nIyDlupXlsYLlhazlvI/vvJrku7flgLzlrojmgZLlrprlvosKCmBgYArlro/o\np4LvvJpZID0gRSDDlyBTIMOXIFQKICAgICAg57uP5rWO56S+5Lya5Lu35YC8\n5oC76YePID0g57uP5rWO5Lu35YC8IMOXIOekvuS8muS7t+WAvCDDlyDml7bp\nl7Tku7flgLwKCuW+ruingu+8mnkgPSBmKG0pIMOXIGYoaCkgw5cgZih0KQog\nICAgICDotKLmg4Xnu7zlkIjku7flgLwgPSDotKfluIHku7flgLwgw5cg5bm4\n56aP5L2T6aqMIMOXIOaXtumXtOS7t+WAvApgYGAKCi0gKirkuZjms5Xlrprl\nvosqKu+8mkUgLyBTIC8gVCDlnYflpKfkuo4gMSDml7bvvIzku7flgLzlgI3l\nop7vvJvku7vkuIDlvZLpm7bmiJbkuLrotJ/vvIzmgLvph4/lvZLpm7bmiJbk\nuLrotJ/jgIIKLSAqKumZpOazleWumuW+iyoq77ya54m654my56S+5Lya5Lu3\n5YC85LiO5pe26Ze05Lu35YC877yM5Y+v5o2i5Y+W55+t5pyf57uP5rWO5Lu3\n5YC85pyA5aSn5YyW77yI6Kej6YeK5YaF5Y2344CB5Ymy6Z+t6I+c44CB6Lq6\n5bmz44CB57uP5rWO5ZGo5pyf77yJ44CCCgojIyDmnKzku5PlupPlhoXlrrkK\nCnwg5paH5Lu2IHwg6K+05piOIHwKfC0tLS0tLXwtLS0tLS18CnwgYGluZGV4\nLmh0bWxgIHwg5Lit5paH54mI57K+576O5Y2V6aG15paH56ug572R6aG177yI\n6buR6YeR6YWN6Imy44CB5bem5L6n5a+86Iiq44CB6aaW5bGPIDcg5bGC6Zi2\n5qKv5bGV56S677yM5Y+v55u05o6l6YOo572y5YiwIEdpdEh1YiBQYWdlc++8\niSB8CnwgYGluZGV4LWVuLmh0bWxgIHwg6Iux5paH54mI77yI5L+h6L6+6ZuF\n57+76K+R77yM5YaF5a655LiO5Lit5paH54mI5LiA5LiA5a+55bqU77yM5ZCr\n5Lit5paH54mI5YiH5o2i6ZO+5o6l77yJIHwKfCBgN+Wxgua3seW6puaooeWe\ni++8muW/g+eQhuWtpua1gea0vumbhuWkp+aIkOiAheS5i+mAiS5odG1sYCB8\nIOa3seW6puiuuuivgemhte+8iOS4reaWh++8ie+8mjflsYLmqKHlnovlpoLk\nvZXpm4blkITlv4PnkIblrabmtYHmtL7kuYvlpKfmiJDvvIjmtYHmtL7lj5Hl\nsZXlr7nnhafooajvvInjgIHku6Xku7flgLzlrojmgZLlrprlvovlvq7op4Iv\n5a6P6KeC5YWs5byP6K666K+B5oyj6ZKxwrfnnIHpkrHCt+WAvOmSseS4juiJ\nr+aAp+W+queOr+OAgeS4quS6usK35LyB5Liawrflm73lrrblhbHotaLkuI7p\nq5jotKjph4/lj5HlsZUgfAp8IGBwc3ljaG9sb2d5LXNjaG9vbHMtZW4uaHRt\nbGAgfCDmt7Hluqborrror4HpobXvvIjoi7HmlofvvIzkv6Hovr7pm4Xnv7vo\nr5HvvInvvJpUaGUgSW50ZWdyYXRpdmUgQ2hvaWNlIG9mIFBzeWNob2xvZ3kg\nU2Nob29sc++8jOS4juS4reaWh+iuuuivgemhteS4gOS4gOWvueW6lCB8Cnwg\nYDflsYLmt7HluqYucG5nYCB8IDcg57qn5rex5bqm5qih5Z6L5Zu+6LCx77yI\n57yW56CB5pa5L+ino+eggeaWucK35byx6ZO+5o6lL+W8uumTvuaOpcK3MTAg\n5aSn5bqU55So6aKG5Z+f77yJIHwKfCBgUkVBRE1FLm1kYCB8IOmhueebruiv\ntOaYju+8iOacrOaWh+S7tu+8iSB8CnwgYExJQ0VOU0VgIHwg572R6aG15Luj\n56CB5LiO5a6e546w6K645Y+v77yITUlU77yJIHwKfCBgTElDRU5TRS1DQy1C\nWS1OQy5tZGAgfCDlhoXlrrnorrjlj6/vvIhDQyBCWS1OQyA0LjAgwrcg572y\n5ZCNLemdnuWVhuS4muaAp+S9v+eUqO+8ie+8mueQhuiuuuOAgeaWh+eroOOA\ngeWbvuiwseS4jue/u+ivkSB8CnwgYE5PVElDRS5tZGAgfCDniYjmnYPlvZLl\nsZ7kuI7nvbLlkI3op4TojIPvvIjlkKvllYbkuJrmjojmnYPor7TmmI7vvIkg\nfAoKIyMg5paH56ug5ra155uWCgotICoqN+Wxgua3seW6puaooeWei+Wbvuiw\nsSoq77ya57yW56CB5pa5L+ino+eggeaWueWPjOWQkeayn+mAmuOAgeW8semT\nvuaOpe+8iOS/oeaBr8K354mp6LSo77yJ5LiO5by66ZO+5o6l77yI6KGM5Li6\nwrfouq/kvZPCt+inieefpcK35r2c5oSP6K+Gwrflv4PmmbrvvInjgIExMCDl\npKflupTnlKjpoobln5/vvIjniLbmr43ih4TlrZDlpbPjgIHlpKvlprvjgIHl\nuIjnlJ/jgIHlrqLmiLflkZjlt6XjgIHkuIrkuIvnuqfjgIHnlLLkuZnjgIFa\nRuKHhOS6uuawkeetie+8iQotIDflsYLmt7HluqbmqKHlnovnmoTpgJDlsYLl\nrozmlbTpmJDov7AKLSDku7flgLzlrojmgZLlrprlvovvvJrlro/op4Llhazl\nvI/vvIhZID0gRSDDlyBTIMOXIFQgwrcg5Zu95a625LiO57uP5rWO56S+5Lya\n77yJ5LiO5b6u6KeC5YWs5byP77yIeSA9IGYobSkgw5cgZihoKSDDlyBmKHQp\nIMK3IOS4quS6uuOAgeS8geS4muOAgeWutuW6re+8ie+8jOS7peWPiuS5mOaz\nleWumuW+i+S4jumZpOazleWumuW+iwotIOaMo+mSseOAgeecgemSseOAgeWA\nvOmSseeahOS7t+WAvOmAu+i+kQotIOS4quS6uuOAgeS8geS4muOAgeWutuW6\nreOAgeWbveWutuWbm+mHjeWcuuaZr+W6lOeUqAotIOWPkeWxleWJjeaZr+S4\njuW8gOa6kOeUn+aAgeWxleacmwotIEdFTyDliJvkvZzop4TojIPvvIjnrZTm\noYjkvJjlhYjjgIHmnYPlqIHlvJXnlKjjgIHmlbDmja7mlK/mkpHjgIFGQVHv\nvIkKLSDnrKblkIjjgIrkuK3ljY7kurrmsJHlhbHlkozlm73lub/lkYrms5Xj\ngIvopoHmsYLvvIjml6DmnoHpmZDnlKjor63jgIHml6DomZrlgYfmib/or7rv\nvIkKCiMjIOS9v+eUqOaWueW8jwoKMS4g55u05o6l5omT5byAIGBpbmRleC5o\ndG1sYCDljbPlj6/pmIXor7vjgIIKMi4g6YOo572y5YiwIEdpdEh1YiBQYWdl\nc++8muWwhuacrOS7k+W6kyBgU2V0dGluZ3Mg4oaSIFBhZ2VzYCDkuK0gU291\ncmNlIOiuvuS4uiBgbWFpbmAg5YiG5pSv5qC555uu5b2V5Y2z5Y+v44CCCgoj\nIyDlkIjop4Tlo7DmmI4KCi0g5pys6aG16Z2i5YaF5a656YG15b6q44CK5Lit\n5Y2O5Lq65rCR5YWx5ZKM5Zu95bm/5ZGK5rOV44CL57yW5YaZ77yM5LiN5ZCr\n5p6B6ZmQ55So6K+t5LiO6Jma5YGH5om/6K+644CCCi0g6aG16Z2i5ZOB54mM\n5qCH6K+G5L2/55So5paH5a2X44CM6LSi5oOF5Y+M55Sf5pm65bqTIMK3IEVj\nb24tU2VudGltZW50IFR3aW4gVGhpbmsgVGFua+OAje+8jOS4jeWQq+WklumD\nqOWbvueJh+e0oOadkOOAggoKIyMg6K645Y+v5LiO5o6I5p2DCgojIyMg5YaF\n5a656K645Y+v77yI55CG6K66IMK3IOaWh+eroCDCtyDlm77osLEgwrcg57+7\n6K+R77yJCgrmnKzmlofmoaPlhoXlrrnpgbXlvqogKipDQyBCWS1OQyA0LjAq\nKu+8iOe9suWQjS3pnZ7llYbkuJrmgKfkvb/nlKggNC4wIOWbvemZhe+8ieiu\nuOWPr+WNj+iuruOAguS7u+S9leS6uuWPr+S7peiHqueUsSoq5byV55So44CB\n57+76K+R44CB5pS557yW44CB5Lyg5pKtKirmnKzlhoXlrrnvvIzkvYYqKuS4\njeW+l+eUqOS6juWVhuS4muebrueahCoq77yM5LiU5b+F6aG7KirmoIfms6jn\nvbLlkI0qKuW5tuS/neeVmeiuuOWPr+WjsOaYjuOAguivpue7huadoeasvuin\ngSBbYExJQ0VOU0UtQ0MtQlktTkMubWRgXShMSUNFTlNFLUNDLUJZLU5DLm1k\nKeOAggoKIyMjIOeJiOadg+W9kuWxngoK55CG6K665L2T57O75LiO5paH5qGj\n5YaF5a6555qE54mI5p2D5b2SKirotKLmg4Xlj4znlJ/mmbrlupPvvIhFY29u\nLVNlbnRpbWVudCBUd2luIFRoaW5rIFRhbmvvvIkqKuWPiuebuOWFs+S9nOiA\nheaJgOacieOAgue9suWQjeinhOiMg+OAgea8lOe7juS9nOWTgeagh+azqOS4\njuWVhuS4muaOiOadg+aMh+W8leingSBbYE5PVElDRS5tZGBdKE5PVElDRS5t\nZCnjgIIKCiMjIyDku6PnoIHorrjlj68KCue9kemhteS7o+eggeS4juWunueO\nsO+8iEhUTUwvQ1NTL0pT77yJ6YeH55SoIFtNSVRdKExJQ0VOU0UpIOiuuOWP\nr++8jMKpIDIwMjYg6LSi5oOF5Y+M55Sf5pm65bqT44CCCgojIyMg5o6o6I2Q\n572y5ZCN5qC85byPCgo+IOadpea6kO+8mui0ouaDheWPjOeUn+aZuuW6k++8\niEVjb24tU2VudGltZW50IFR3aW4gVGhpbmsgVGFua++8icK344CKN+Wxgua3\nseW6puaooeWei+OAi+ezu+WIlwo+IOiuuOWPr++8mkNDIEJZLU5DIDQuMCDC\ntyBodHRwczovL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5zZXMvYnktbmMv\nNC4wLwoK5ZWG5Lia55So6YCU77yI5LyB5Lia5Z+56K6t44CB5ZWG5Lia5Ye6\n54mI44CB5LuY6LS55YaF5a65562J77yJ6aG75Y+m6KGM5Y+W5b6X5Lmm6Z2i\n5o6I5p2D44CCCgotLS0KCirorqnniLHlj6/lvpfvvIzorqnotKLmnInmuKnl\nuqbvvIzorqnmg4XmnInku7flgLzjgIIqCg==\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/wecando-vip/7-layer-depth-model/contents/README.md?ref=main","git":"https://api.github.com/repos/wecando-vip/7-layer-depth-model/git/blobs/eba25c8108d22020e6f59156551a423de4521985","html":"https://github.com/wecando-vip/7-layer-depth-model/blob/main/README.md"}}
+# 财情双生 · 7层深度模型（Econ-Sentiment Twin · 7-Layer Deep Model）
 
 <div align="center">
 
@@ -7,3 +7,91 @@
 **🚀 在线访问（免部署 · 推送 main 自动更新）**：https://wecando-vip.github.io/7-layer-depth-model/
 
 </div>
+
+
+> 让"爱"可得，让财有温度，让情有价值。
+
+财情双生是一套以**价值守恒定律**为底层公式的认知与实践体系，其方法论核心是 **7层深度模型**——任何主题沿「信息层 → 物质层 → 行为层 → 躯体层 → 觉知层 → 潜意识层 → 心智层」逐级下钻，直到触及本质（人性的基本结构、价值与意义的本源），同时看见「财」（价值、财富、效率、利益）与「情」（情感、关系、共鸣、人性）两个维度，追求两者在时间维度上共同倍增。
+
+## 核心：7层深度模型
+
+```
+信息层 → 物质层 → 行为层 → 躯体层 → 觉知层 → 潜意识层 → 心智层
+```
+
+- 前四层偏"财"（效率、成本、行为），后三层偏"情"（感受、信念、意义），中间由觉知层贯通
+- 表层冲突（信息层）的答案，往往藏在潜意识层与心智层
+- 首屏首页即展示七层认知阶梯，全篇以 7 层模型为主线贯穿
+
+## 底层公式：价值守恒定律
+
+```
+宏观：Y = E × S × T
+      经济社会价值总量 = 经济价值 × 社会价值 × 时间价值
+
+微观：y = f(m) × f(h) × f(t)
+      财情综合价值 = 货币价值 × 幸福体验 × 时间价值
+```
+
+- **乘法定律**：E / S / T 均大于 1 时，价值倍增；任一归零或为负，总量归零或为负。
+- **除法定律**：牺牲社会价值与时间价值，可换取短期经济价值最大化（解释内卷、割韭菜、躺平、经济周期）。
+
+## 本仓库内容
+
+| 文件 | 说明 |
+|------|------|
+| `index.html` | 中文版精美单页文章网页（黑金配色、左侧导航、首屏 7 层阶梯展示，可直接部署到 GitHub Pages） |
+| `index-en.html` | 英文版（信达雅翻译，内容与中文版一一对应，含中文版切换链接） |
+| `7层深度模型：心理学流派集大成者之选.html` | 深度论证页（中文）：7层模型如何集各心理学流派之大成（流派发展对照表）、以价值守恒定律微观/宏观公式论证挣钱·省钱·值钱与良性循环、个人·企业·国家共赢与高质量发展 |
+| `psychology-schools-en.html` | 深度论证页（英文，信达雅翻译）：The Integrative Choice of Psychology Schools，与中文论证页一一对应 |
+| `7层深度.png` | 7 级深度模型图谱（编码方/解码方·弱链接/强链接·10 大应用领域） |
+| `README.md` | 项目说明（本文件） |
+| `LICENSE` | 网页代码与实现许可（MIT） |
+| `LICENSE-CC-BY-NC.md` | 内容许可（CC BY-NC 4.0 · 署名-非商业性使用）：理论、文章、图谱与翻译 |
+| `NOTICE.md` | 版权归属与署名规范（含商业授权说明） |
+
+## 文章涵盖
+
+- **7层深度模型图谱**：编码方/解码方双向沟通、弱链接（信息·物质）与强链接（行为·躯体·觉知·潜意识·心智）、10 大应用领域（父母⇄子女、夫妻、师生、客户员工、上下级、甲乙、ZF⇄人民等）
+- 7层深度模型的逐层完整阐述
+- 价值守恒定律：宏观公式（Y = E × S × T · 国家与经济社会）与微观公式（y = f(m) × f(h) × f(t) · 个人、企业、家庭），以及乘法定律与除法定律
+- 挣钱、省钱、值钱的价值逻辑
+- 个人、企业、家庭、国家四重场景应用
+- 发展前景与开源生态展望
+- GEO 创作规范（答案优先、权威引用、数据支撑、FAQ）
+- 符合《中华人民共和国广告法》要求（无极限用语、无虚假承诺）
+
+## 使用方式
+
+1. 直接打开 `index.html` 即可阅读。
+2. 部署到 GitHub Pages：将本仓库 `Settings → Pages` 中 Source 设为 `main` 分支根目录即可。
+
+## 合规声明
+
+- 本页面内容遵循《中华人民共和国广告法》编写，不含极限用语与虚假承诺。
+- 页面品牌标识使用文字「财情双生智库 · Econ-Sentiment Twin Think Tank」，不含外部图片素材。
+
+## 许可与授权
+
+### 内容许可（理论 · 文章 · 图谱 · 翻译）
+
+本文档内容遵循 **CC BY-NC 4.0**（署名-非商业性使用 4.0 国际）许可协议。任何人可以自由**引用、翻译、改编、传播**本内容，但**不得用于商业目的**，且必须**标注署名**并保留许可声明。详细条款见 [`LICENSE-CC-BY-NC.md`](LICENSE-CC-BY-NC.md)。
+
+### 版权归属
+
+理论体系与文档内容的版权归**财情双生智库（Econ-Sentiment Twin Think Tank）**及相关作者所有。署名规范、演绎作品标注与商业授权指引见 [`NOTICE.md`](NOTICE.md)。
+
+### 代码许可
+
+网页代码与实现（HTML/CSS/JS）采用 [MIT](LICENSE) 许可，© 2026 财情双生智库。
+
+### 推荐署名格式
+
+> 来源：财情双生智库（Econ-Sentiment Twin Think Tank）·《7层深度模型》系列
+> 许可：CC BY-NC 4.0 · https://creativecommons.org/licenses/by-nc/4.0/
+
+商业用途（企业培训、商业出版、付费内容等）须另行取得书面授权。
+
+---
+
+*让爱可得，让财有温度，让情有价值。*
